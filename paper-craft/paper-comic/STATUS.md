@@ -4,9 +4,9 @@
 
 ## 基本信息
 
-- 路径：`/Users/ganxuanzhi/skills/nature/paper-comic`
+- 路径：`/Users/ganxuanzhi/skills/paper-craft/paper-comic`
 - 入口：`SKILL.md`
-- 分类：`nature`
+- 分类：`paper-craft`
 - 来源：`https://github.com/zsyggg/paper-craft-skills`（MIT）
 - 最近维护：`2026-06-15`
 

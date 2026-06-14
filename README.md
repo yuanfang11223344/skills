@@ -33,19 +33,24 @@ skills/
 ```
 skills/
 ├── README.md
-└── nature/                    # 学术写作分类（nature-skills）
-    ├── _shared/               # 共享：伦理、术语、论文分类、期刊格式
-    ├── nature-academic-search/  # 多源文献检索
-    ├── nature-citation/         # Nature/CNS 引文管理
-    ├── nature-data/             # Data Availability 声明
-    ├── nature-figure/           # 学术图表（Python/R）
-    ├── nature-paper-to-patent/  # 论文转中国发明专利
-    ├── nature-paper2ppt/        # 论文 → 组会中文 PPT
-    ├── nature-polishing/        # Nature 风格英文润色/中译英
-    ├── nature-reader/           # 论文精读 中英对照
-    ├── nature-response/         # 审稿回复信
-    ├── nature-reviewer/         # Nature 风格审稿模拟
-    └── nature-writing/          # 从零起草 Nature 风格稿件
+├── _management/                # 管理工具（手册、模板、脚本）
+├── nature/                    # 学术写作分类（11 个 skill，来自 nature-skills）
+│   ├── _shared/               # 共享：伦理、术语、论文分类、期刊格式
+│   ├── nature-academic-search/  # 多源文献检索
+│   ├── nature-citation/         # Nature/CNS 引文管理
+│   ├── nature-data/             # Data Availability 声明
+│   ├── nature-figure/           # 学术图表（Python/R）
+│   ├── nature-paper-to-patent/  # 论文转中国发明专利
+│   ├── nature-paper2ppt/        # 论文 → 组会中文 PPT
+│   ├── nature-polishing/        # Nature 风格英文润色/中译英
+│   ├── nature-reader/           # 论文精读 中英对照
+│   ├── nature-response/         # 审稿回复信
+│   ├── nature-reviewer/         # Nature 风格审稿模拟
+│   └── nature-writing/          # 从零起草 Nature 风格稿件
+└── paper-craft/               # 论文可视化分类（3 个 skill，来自 paper-craft-skills）
+    ├── paper-analyzer/           # 论文 → 深度HTML长文
+    ├── paper-comic/              # 论文 → 方法图解
+    └── paper-deck/               # 论文 → AIGC高质感幻灯片
 ```
 
 ## Skill 文件格式
