@@ -37,7 +37,8 @@ skills/
 ├── nature/                    # 学术写作（11 skill，Yuan1z0825/nature-skills）
 ├── paper-craft/               # 论文可视化（3 skill，zsyggg/paper-craft-skills）
 ├── academic-research/         # 学术研究（4 skill，Imbad0202/academic-research-skills）
-└── superpowers/               # 软件开发（14 skill，obra/superpowers）
+├── superpowers/               # 软件开发（14 skill，obra/superpowers）
+└── firecrawl/                 # web 数据提取（15 skill，firecrawl org）
 ```
 
 | 分类 | 来源 | 领域 | 数量 | 入口 |
@@ -46,6 +47,7 @@ skills/
 | `paper-craft/` | zsyggg/paper-craft-skills | 论文可视化 | 3 | [paper-craft/README.md](paper-craft/README.md) |
 | `academic-research/` | Imbad0202/academic-research-skills | 学术研究 | 4 | [academic-research/README.md](academic-research/README.md) |
 | `superpowers/` | obra/superpowers | 软件开发 | 14 | [superpowers/README.md](superpowers/README.md) |
+| `firecrawl/` | firecrawl/skills + firecrawl/cli | web 数据 | 15 | [firecrawl/README.md](firecrawl/README.md) |
 
 ## Skill 文件格式
 

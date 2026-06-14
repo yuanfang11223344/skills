@@ -15,6 +15,7 @@
 | `paper-craft/` | `zsyggg/paper-craft-skills` | zsyggg | 3 | 论文可视化 | [paper-craft/README.md](paper-craft/README.md) |
 | `academic-research/` | `Imbad0202/academic-research-skills` | Imbad0202 | 4 | 学术研究 | [academic-research/README.md](academic-research/README.md) |
 | `superpowers/` | `obra/superpowers` | obra | 14 | 软件开发 | [superpowers/README.md](superpowers/README.md) |
+| `firecrawl/` | `firecrawl/skills` + `firecrawl/cli` | firecrawl | 15 | web 数据提取 | [firecrawl/README.md](firecrawl/README.md) |
 
 ---
 
@@ -74,6 +75,26 @@
 
 ---
 
+## firecrawl/ — web 数据提取（15 skill）
+
+| Skill | 主要用途 | 触发场景 |
+| --- | --- | --- |
+| `firecrawl-cli` | 总入口：搜索/抓取/交互 web | 搜索网页、抓取 URL |
+| `firecrawl-search` | Web 搜索+全文提取 | 搜索、找资料 |
+| `firecrawl-scrape` | 单页→clean markdown | scrape、grab、fetch |
+| `firecrawl-crawl` | 整站批量提取 | crawl、批量提取 |
+| `firecrawl-map` | 站点 URL 发现 | map、找到某个页面 |
+| `firecrawl-interact` | 浏览器交互（点击/填表/登录） | interact、click、fill form |
+| `firecrawl-agent` | AI 自主结构化提取（schema→JSON） | extract structured data |
+| `firecrawl-parse` | 本地文件→markdown | parse PDF、convert document |
+| `firecrawl-download` | 整站下载为本地文件 | download the site |
+| `firecrawl-monitor` | 页面变更监控+通知 | monitor、watch、track |
+| `firecrawl-build` | SDK 集成向导 | 集成 Firecrawl 到应用 |
+| `firecrawl-build-onboarding` | SDK 凭证与安装 | 需要 API key |
+| `firecrawl-build-scrape` | `/scrape` 端点代码集成 | 单页提取集成 |
+| `firecrawl-build-search` | `/search` 端点代码集成 | 发现+提取集成 |
+| `firecrawl-build-interact` | `/interact` 端点代码集成 | 动态页面集成 |
+
 ## Markdown 入口目录
 
 ```text
@@ -83,7 +104,7 @@
 /Users/ganxuanzhi/skills/nature/README.md                   ← nature 分类入口
 /Users/ganxuanzhi/skills/paper-craft/README.md              ← paper-craft 分类入口
 /Users/ganxuanzhi/skills/academic-research/README.md        ← academic-research 分类入口
-/Users/ganxuanzhi/skills/superpowers/README.md              ← superpowers 分类入口
+/Users/ganxuanzhi/skills/firecrawl/README.md                 ← firecrawl 分类入口
 ```
 
 完整 SKILL.md 列表运行：`/Users/ganxuanzhi/skills/_management/scripts/list-skills.sh`
@@ -100,6 +121,7 @@
 | 论文解读、方法图、AIGC 幻灯片 | 论文可视化 | `paper-craft/` |
 | 深度文献研究、多 agent 论文管道 | 学术研究 | `academic-research/` |
 | 软件开发、调试、代码审查 | 软件开发 | `superpowers/` |
+| web 抓取、搜索、数据提取 | web 数据 | `firecrawl/` |
 
 ### 跨分类关键区分
 

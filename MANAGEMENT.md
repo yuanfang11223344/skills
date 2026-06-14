@@ -24,6 +24,8 @@
 - 上游 paper-craft-skills：`https://github.com/zsyggg/paper-craft-skills`
 - 上游 academic-research-skills：`https://github.com/Imbad0202/academic-research-skills`
 - 上游 superpowers：`https://github.com/obra/superpowers`
+- 上游 firecrawl-skills：`https://github.com/firecrawl/skills`
+- 上游 firecrawl-cli：`https://github.com/firecrawl/cli`
 
 ## 分类核心原则：一个来源 = 一个分类目录
 
@@ -44,6 +46,7 @@
 | `paper-craft/` | `zsyggg/paper-craft-skills` | zsyggg |
 | `academic-research/` | `Imbad0202/academic-research-skills` | Imbad0202 |
 | `superpowers/` | `obra/superpowers` | obra |
+| `firecrawl/` | `firecrawl/skills` + `firecrawl/cli` | firecrawl |
 
 ### 新来源接入示例
 
