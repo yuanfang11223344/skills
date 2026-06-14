@@ -3,6 +3,7 @@
 更新时间：2026-06-15
 
 根目录：`/Users/ganxuanzhi/skills`
+管理入口：[MANAGEMENT.md](MANAGEMENT.md) | [README.md](README.md)
 
 ## 总览
 
@@ -23,10 +24,10 @@
 ## Markdown 入口目录
 
 ```text
-/Users/ganxuanzhi/skills/README.md
-/Users/ganxuanzhi/skills/MANAGEMENT.md
-/Users/ganxuanzhi/skills/INDEX.md
-/Users/ganxuanzhi/skills/nature/README.md
+/Users/ganxuanzhi/skills/README.md              ← 根目录规则说明
+/Users/ganxuanzhi/skills/MANAGEMENT.md           ← 管理手册
+/Users/ganxuanzhi/skills/INDEX.md                ← 本文件，索引
+/Users/ganxuanzhi/skills/nature/README.md        ← nature 分类入口，11 个 skill 详细介绍
 /Users/ganxuanzhi/skills/nature/nature-academic-search/SKILL.md
 /Users/ganxuanzhi/skills/nature/nature-citation/SKILL.md
 /Users/ganxuanzhi/skills/nature/nature-data/SKILL.md

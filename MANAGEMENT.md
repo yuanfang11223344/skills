@@ -10,51 +10,72 @@
 4. 用 `INDEX.md` 维护可读目录，用脚本快速列出 Markdown 与 skill 入口。
 5. 本地目录以 Git 管理，并同步到 GitHub 仓库 `yuanfang11223344/skills`。
 6. Obsidian Vault 同步记录每次管理动作、推荐逻辑和目录变化。
+7. 定期检测上游 skill 仓库更新，提醒用户升级。
 
 ## 固定目录
 
 - Skills 根目录：`/Users/ganxuanzhi/skills`
+- Codex skills 软链接：`~/.codex/skills/shared-user-skills` → `/Users/ganxuanzhi/skills`
+- Claude Code skills 软链接：`~/.claude/skills` → `/Users/ganxuanzhi/skills`
 - Obsidian 同步目录：`/Users/ganxuanzhi/Documents/Obsidian Vault/AI Skills 管理`
-- GitHub 目标仓库：`https://github.com/yuanfang11223344/skills`
-- GitHub remote：`git@github.com:yuanfang11223344/skills.git`
+- GitHub 仓库：`https://github.com/yuanfang11223344/skills`
+- GitHub remote（实际）：以 `git remote -v` 输出为准（当前为 HTTPS）
+- 上游 nature-skills：`https://github.com/Yuan1z0825/nature-skills`
 
 ## 每次处理流程
 
-1. 盘点目录：列出新增、修改、缺失的 `SKILL.md`、`README.md`、`manifest.yaml`、`STATUS.md`。
-2. 校验结构：复杂 skill 必须是文件夹形式，入口为 `SKILL.md`；简单 skill 可以是单个 Markdown。
-3. 写情况说明：每个新 skill 文件夹必须新增或更新 `STATUS.md`。
-4. 更新索引：更新 `INDEX.md`，记录 skill 名称、用途、触发词、状态、路径。
-5. 推荐调度：根据用户当前任务，从 `INDEX.md` 和 `SKILL.md` 描述中推荐最匹配的 skill。
-6. 同步 Obsidian：更新 Obsidian 中的管理笔记，记录本次变更和推荐规则。
-7. Git 同步：提交本地 changes；如果远端仓库可用，推送到 `yuanfang11223344/skills`。
+### 第 0 步：启动前健康检查（<30 秒，每次必做）
 
-## 新 Skill 接入规范
+任何一项失败都要记录原因并报告用户，不要静默跳过。
 
-新下载的 skill 放入：
+| 检查项 | 命令/方式 | 失败处理 |
+|---|---|---|
+| Claude Code 软链接 | `ls -la ~/.claude/skills` | 如断开则重建；如是真实目录则报告用户 |
+| Codex 软链接 | `ls -la ~/.codex/skills/shared-user-skills` | 同上 |
+| Git remote 可达 | `git remote -v && git fetch --dry-run` | 记录原因，不阻塞其他步骤 |
+| Obsidian 目录 | `ls "/Users/ganxuanzhi/Documents/Obsidian Vault/AI Skills 管理"` | 如不存在则创建并初始化三个基础文件 |
+| list-skills.sh 可执行 | `test -x _management/scripts/list-skills.sh` | 如不可执行则 `chmod +x` |
+| .gitignore 存在 | `test -f .gitignore` | 如不存在则创建，至少排除 .DS_Store |
 
-```text
-/Users/ganxuanzhi/skills/<category>/<skill-name>/
-```
+**注意**：Git remote 格式以实际 `git remote -v` 输出为准。当前为 HTTPS（`https://github.com/yuanfang11223344/skills.git`），如果 MANAGEMENT.md 中写了 SSH 但实际为 HTTPS，以实际为准，报告中标注差异即可。
 
-必需文件：
+### 第 1 步：盘点目录
 
-- `SKILL.md`：主入口，包含 `name` 和 `description` frontmatter。
-- `STATUS.md`：情况说明，记录来源、用途、状态、维护动作。
+- 列出所有 skill 文件夹和 SKILL.md 入口
+- 识别新增、修改、缺失的文件
+- 运行 `_management/scripts/list-skills.sh` 获取当前状态
+- 检查每个 skill 是否具备：SKILL.md、STATUS.md
+- 检查是否有建议但缺失的文件：README.md、manifest.yaml、static/、references/
 
-建议文件：
+**排除规则**——以下目录/文件不要当作 skill 盘点：
+- `_management/` — 管理工具，不是 skill
+- `README.md` / `MANAGEMENT.md` / `INDEX.md` — 顶层管理文件
+- `.DS_Store` / `.git/` / `.gitignore` — 系统/版本控制文件
+- 没有 `SKILL.md` 的目录 — 可能是分类目录（如 `nature/`）或共享资源目录（如 `_shared/`）
 
-- `README.md`：给人看的说明。
-- `manifest.yaml`：路由轴、加载片段、动态调度配置。
-- `static/`：稳定规则、模板、片段。
-- `references/`：按需读取的参考材料。
-- `scripts/`：可复用脚本。
-- `tests/` 或 `evals/`：测试与评估样例。
+**结构区分**：
+| 目录类型 | 特征 | 举例 |
+|---|---|---|
+| 分类目录 | 无 SKILL.md，有子目录 | `nature/` |
+| 共享资源 | 无 SKILL.md，被 manifest.yaml 引用 | `nature/_shared/` |
+| Skill 目录 | 有 SKILL.md | `nature/nature-polishing/` |
+| 管理目录 | 在 _management/ 下 | `_management/` |
 
-## STATUS.md 要写什么
+### 第 2 步：校验结构
+
+- 复杂 skill 必须是文件夹形式，入口为 `SKILL.md`
+- `SKILL.md` 必须包含 `name` 和 `description` frontmatter
+- **从 SKILL.md 中读取 `version` 字段，记录当前版本号**
+- 路由型 skill（有 `manifest.yaml`）必须能访问 `_shared/` 共享资源
+- 检查相对路径引用是否有效（如 `../_shared/core/xxx.md`）
+- 检查 `.gitignore` 是否覆盖了 `.DS_Store`、`*.swp`、`*.tmp` 等常见垃圾文件
+
+### 第 3 步：写情况说明
 
 每个 skill 的 `STATUS.md` 至少包含：
 
 - 当前状态：Active、Beta、Draft、Archived。
+- 版本号（与 SKILL.md 的 version 一致）。
 - 主要用途。
 - 推荐触发词。
 - 与其他 skills 的关系。
@@ -63,7 +84,37 @@
 
 模板见：`_management/templates/SKILL_STATUS_TEMPLATE.md`。
 
-## 推荐调度规则
+### 第 4 步：更新索引
+
+- 更新 `INDEX.md`
+- 索引必须包含：
+  - 总览表：skill 名称、状态、主要用途、推荐触发词
+  - Markdown 入口目录：列出所有 SKILL.md 和重要 README.md 的绝对路径并加简短注释
+  - 调度建议表：按任务阶段列出首选 skill 和可联动 skill
+  - 维护命令：list-skills.sh 路径、git status 命令
+- 索引底部增加「跨工具加载状态」小节
+
+### 第 5 步：上游更新检测
+
+- 记录每个 skill 的当前版本号（从 `SKILL.md` frontmatter 读取 `version`）
+- 对于来源为 `Yuan1z0825/nature-skills` 的 skill，检查上游：
+  ```bash
+  git ls-remote --tags https://github.com/Yuan1z0825/nature-skills.git 2>/dev/null
+  ```
+- 如果发现新版本：
+  - **通知用户**「XX skill 有新版本 vA.B.C，当前版本 vX.Y.Z」
+  - **询问用户**是否更新
+  - **不要自动覆盖**，等用户确认
+- 如果上游不可达：记录原因，标记「本次未检查」
+- 更新方式（用户确认后）：
+  ```bash
+  cd /tmp && git clone --depth 1 https://github.com/Yuan1z0825/nature-skills.git nature-skills-update
+  cp -R nature-skills-update/skills/<skill-name> /Users/ganxuanzhi/skills/nature/<skill-name>
+  cp -R nature-skills-update/skills/_shared /Users/ganxuanzhi/skills/nature/_shared
+  rm -rf nature-skills-update
+  ```
+
+### 第 6 步：推荐调度
 
 优先级从高到低：
 
@@ -75,50 +126,21 @@
 
 常用路由：
 
-- 读论文、全文翻译、中英对照：`nature-reader`
-- 文献检索、查论文、引文核对：`nature-academic-search`
-- 写论文结构、起草章节：`nature-writing`
-- 论文润色、中译英、LaTeX 排版：`nature-polishing`
-- 自动补引用、Nature/CNS 支撑文献：`nature-citation`
-- 数据可用性、代码和数据共享声明：`nature-data`
-- 科研绘图、论文图表：`nature-figure`
-- 论文转组会 PPT：`nature-paper2ppt`
-- 审稿意见回复、rebuttal：`nature-response`
-- 投稿前模拟审稿：`nature-reviewer`
-- 论文转中国发明专利：`nature-paper-to-patent`
+| 用户任务 | 首选 skill | 可联动 skill |
+|---|---|---|
+| 读论文、全文翻译、中英对照 | nature-reader | nature-academic-search |
+| 文献检索、查论文、引文核对 | nature-academic-search | nature-citation |
+| 写论文结构、起草章节 | nature-writing | nature-citation, nature-data |
+| 论文润色、中译英、LaTeX 排版 | nature-polishing | nature-citation |
+| 自动补引用、Nature/CNS 支撑文献 | nature-citation | nature-academic-search |
+| 数据可用性、代码和数据共享声明 | nature-data | — |
+| 科研绘图、论文图表 | nature-figure | nature-data |
+| 论文转组会 PPT | nature-paper2ppt | nature-reader, nature-figure |
+| 审稿意见回复、rebuttal | nature-response | nature-polishing, nature-citation |
+| 投稿前模拟审稿 | nature-reviewer | nature-writing, nature-polishing |
+| 论文转中国发明专利 | nature-paper-to-patent | nature-reader |
 
-## GitHub 同步规则
-
-本地仓库设在 `/Users/ganxuanzhi/skills`。远端目标为：
-
-```bash
-git remote add origin git@github.com:yuanfang11223344/skills.git
-```
-
-如果 GitHub 仓库尚不存在，先完成本地 Git 初始化和 Obsidian 记录；等仓库创建后再执行：
-
-```bash
-git push -u origin main
-```
-
-当前状态记录：
-
-- `2026-06-15`：本地仓库已初始化，首个提交为 `9031e98`。
-- `2026-06-15`：GitHub 连接器查询 `yuanfang11223344/skills` 返回 404；SSH 推送因 host key 未验证/远端不可读失败。
-
-每次同步前先检查：
-
-```bash
-git status --short
-```
-
-提交信息格式：
-
-```text
-skills: <本次维护内容>
-```
-
-## Obsidian 同步规则
+### 第 7 步：同步 Obsidian
 
 Obsidian 中维护：
 
@@ -132,13 +154,87 @@ Obsidian 中维护：
 YYYY-MM-DD HH:mm - <动作> - <影响的 skill 或文件> - <Git 状态>
 ```
 
-## 本机共享接入
+### 第 8 步：Git 同步
 
-推荐用软链接让其他工具共享：
+- 提交前确保 `.gitignore` 覆盖了常见垃圾文件（.DS_Store、*.swp、*.tmp 等）
+- 检查 `git status --short`，如果发现垃圾文件在未跟踪列表，先确认 `.gitignore` 生效
+- 提交信息格式：`skills: <本次维护内容>`
+- **使用实际的 git remote URL**（以 `git remote -v` 输出为准，不要硬编码特定协议）
+- 提交前展示变更摘要，等待用户确认
+- Push 前确认 upstream 已设置：
+  ```bash
+  git push --set-upstream origin main
+  ```
+- **Push 失败降级方案**：
+  - 不要静默跳过，记录错误原因
+  - 如果因认证问题（HTTPS 需要 token），提示用户检查 git credential
+  - 保存变更摘要到 `_management/last-unsynced.md`，下次成功同步后删除
+  - 报告中明确标注「Git push 失败，变更已暂存本地」
+
+### 第 9 步：跨工具加载状态
+
+每次执行后在最终报告中增加：
+
+| 工具 | 软链接 | 文件可读 | 说明 |
+|---|---|---|---|
+| Claude Code | OK/FIXED/FAIL | OK/FAIL | 新 session 生效 |
+| Codex | OK/FIXED/FAIL | OK/FAIL | 已通过 shared-user-skills 加载 |
+
+提示用户：
+- 如果新安装的 skill 在 Claude Code 中不生效：重启 session 或 `claude --clear-cache`
+- 如果新安装的 skill 在 Codex 中不生效：重启 Codex session
+- 首次安装的 skill 可能需要 1-2 次交互后才会被 AI 工具自动发现
+
+## Github 同步规则
+
+本地仓库设在 `/Users/ganxuanzhi/skills`。远端目标：
 
 ```bash
-ln -s /Users/ganxuanzhi/skills ~/.codex/skills
+git remote add origin https://github.com/yuanfang11223344/skills.git
+```
+
+如果 GitHub 仓库尚不存在，先完成本地 Git 初始化和 Obsidian 记录；等仓库创建后再执行：
+
+```bash
+git push -u origin main
+```
+
+### 当前状态
+
+- `2026-06-15`：本地仓库已初始化并推送成功，upstream 已设置。
+- `2026-06-15`：Git 仓库 `yuanfang11223344/skills` 已在 GitHub 创建，HTTPS push 正常。
+
+### 每次同步前先检查
+
+```bash
+git status --short
+```
+
+### 提交信息格式
+
+```text
+skills: <本次维护内容>
+```
+
+### 不要提交
+
+- .DS_Store、*.swp、*.tmp
+- 临时下载文件
+- 无关缓存
+
+## 本机共享接入
+
+软链接：
+
+```bash
 ln -s /Users/ganxuanzhi/skills ~/.claude/skills
+ln -s /Users/ganxuanzhi/skills ~/.codex/skills/shared-user-skills
 ```
 
 如果目标目录已存在，先确认是否已是软链接，避免覆盖已有用户内容。
+
+## 跨工具兼容注意事项
+
+- Skill 内容使用通用的 frontmatter + markdown 格式，不绑定任何单一 AI 工具
+- 各 AI 工具读取自己关心的字段，忽略不认识的字段
+- 维护时不要引入仅特定工具支持的私有字段

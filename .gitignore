@@ -3,3 +3,17 @@
 *.log
 __pycache__/
 .pytest_cache/
+*/.DS_Store
+*/**/.DS_Store
+*.swp
+*.swo
+*~
+.Trashes
+Thumbs.db
+*.patch
+*.orig
+*.rej
+node_modules/
+.venv/
+venv/
+env/
