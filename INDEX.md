@@ -20,6 +20,9 @@
 | `nature-response` | Beta | 审稿意见逐点回复、rebuttal、修回信 | 审稿回复、大修、小修、回应 reviewer |
 | `nature-reviewer` | Draft | 投稿前模拟 Nature 风格审稿和交叉评估 | 模拟审稿、预审、审稿人视角 |
 | `nature-writing` | Active | 从 claims、结果和笔记起草或重构论文段落 | 写论文、起草摘要/引言/方法/讨论 |
+| `paper-analyzer` | Active | 论文→深度 HTML 长文（6 轮工作流、KaTeX/Mermaid、3 种写作风格） | 论文解读、论文深度解析、HTML 论文报告 |
+| `paper-comic` | Active | 论文方法图解（生图模型，paper-figure/sketchnote 两风格） | 论文图解、方法图、概念图、论文配图 |
+| `paper-deck` | Active | 论文→AIGC 高质感幻灯片（逐页生图，4 种风格，PPTX/PDF） | 论文PPT、高质感幻灯片、逐页生图PPT |
 
 ## Markdown 入口目录
 
@@ -27,7 +30,7 @@
 /Users/ganxuanzhi/skills/README.md              ← 根目录规则说明
 /Users/ganxuanzhi/skills/MANAGEMENT.md           ← 管理手册
 /Users/ganxuanzhi/skills/INDEX.md                ← 本文件，索引
-/Users/ganxuanzhi/skills/nature/README.md        ← nature 分类入口，11 个 skill 详细介绍
+/Users/ganxuanzhi/skills/nature/README.md        ← nature 分类入口，14 个 skill 详细介绍
 /Users/ganxuanzhi/skills/nature/nature-academic-search/SKILL.md
 /Users/ganxuanzhi/skills/nature/nature-citation/SKILL.md
 /Users/ganxuanzhi/skills/nature/nature-data/SKILL.md
@@ -39,6 +42,9 @@
 /Users/ganxuanzhi/skills/nature/nature-response/SKILL.md
 /Users/ganxuanzhi/skills/nature/nature-reviewer/SKILL.md
 /Users/ganxuanzhi/skills/nature/nature-writing/SKILL.md
+/Users/ganxuanzhi/skills/nature/paper-analyzer/SKILL.md
+/Users/ganxuanzhi/skills/nature/paper-comic/SKILL.md
+/Users/ganxuanzhi/skills/nature/paper-deck/SKILL.md
 ```
 
 ## 调度建议
@@ -53,7 +59,10 @@
 | 润色与中译英 | `nature-polishing` | `nature-citation` |
 | 补引用 | `nature-citation` | `nature-academic-search` |
 | 做图 | `nature-figure` | `nature-data` |
+| 做概念图/方法图解 | `paper-comic` | `nature-reader`, `nature-figure` |
 | 做汇报 | `nature-paper2ppt` | `nature-reader`, `nature-figure` |
+| 视觉型PPT | `paper-deck` | `nature-reader`, `nature-figure` |
+| 论文深度解读 | `paper-analyzer` | `nature-reader`, `nature-academic-search` |
 | 回审稿人 | `nature-response` | `nature-polishing`, `nature-citation` |
 | 投稿前自审 | `nature-reviewer` | `nature-writing`, `nature-polishing` |
 | 转专利 | `nature-paper-to-patent` | `nature-reader` |

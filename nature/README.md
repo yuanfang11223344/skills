@@ -1,10 +1,10 @@
 # Nature Skills — 学术写作全流程 AI 工具箱
 
-> 来源：[nature-skills](https://github.com/Yuan1z0825/nature-skills) (v1.0.0)
-> 作者：袁一哲
+> 来源：[nature-skills](https://github.com/Yuan1z0825/nature-skills) (v1.0.0) + [paper-craft-skills](https://github.com/zsyggg/paper-craft-skills)
+> 作者：袁一哲 (nature) / zsyggg (paper-craft)
 > 协议：MIT
 
-12 个 AI skill，覆盖从文献检索、论文精读、学术写作/润色、图表制作、引文管理，到审稿回复、PPT 汇报、专利申请的完整学术工作流。
+14 个 AI skill，覆盖从文献检索、论文精读、学术写作/润色、图表制作、引文管理，到审稿回复、PPT 汇报、专利申请、方法图解、深度解读的完整学术工作流。
 
 ---
 
@@ -32,7 +32,10 @@ nature/
 ├── nature-reviewer/           # ⑧ 审稿模拟
 ├── nature-response/           # ⑨ 审稿回复
 ├── nature-paper2ppt/          # ⑩ 论文转PPT
-└── nature-paper-to-patent/    # ⑪ 论文转专利
+├── nature-paper-to-patent/    # ⑪ 论文转专利
+├── paper-analyzer/            # ⑫ 论文深度解读（HTML长文）
+├── paper-comic/               # ⑬ 论文方法图解（生图模型）
+└── paper-deck/                # ⑭ 高质感AIGC幻灯片（逐页生图）
 ```
 
 所有 skill 均为文件夹形式（含 `SKILL.md` + 配套 `static/`、`references/`、`manifest.yaml`），不可只复制单个 `SKILL.md`。
@@ -159,6 +162,45 @@ nature/
 | 输入 | 论文/论文/源代码 |
 | 输出 | 多个 .docx 文件（权利要求书、说明书、摘要、附图） |
 
+### ⑫ paper-analyzer — 论文 → 深度 HTML 长文
+
+| 属性 | 值 |
+|---|---|
+| 版本 | - |
+| 来源 | zsyggg/paper-craft-skills |
+| 核心功能 | 6 轮强制工作流：论文解析→代码仓库搜索→KaTeX 公式渲染→Mermaid 图表→写作风格→HTML 输出。3 种风格：storytelling（爆款科普）、academic（深度学术）、concise（速查表） |
+| 触发词 | 论文解读、论文深度分析、解析论文、HTML 论文报告、论文科普 |
+| 输入 | arXiv 链接 / PDF / 粘贴文本 |
+| 输出 | 可分享的精美 HTML 页面（含公式、代码对照、架构图） |
+
+> 与 `nature-reader` 的区别：reader 做中英对照全文翻译+图表定位；analyzer 做深度解读+代码搜索+公式拆解+HTML 输出。
+
+### ⑬ paper-comic — 论文方法图解（生图模型）
+
+| 属性 | 值 |
+|---|---|
+| 版本 | - |
+| 来源 | zsyggg/paper-craft-skills |
+| 核心功能 | 分析论文核心方法→推荐封面/概述图/机制细节图方案→用户确认范围/张数/语言/风格→生图模型生成。2 种风格：paper-figure（论文框架图风）、sketchnote（温暖笔记风） |
+| 触发词 | 论文图解、方法图解、论文方法图、概念图、画论文架构图 |
+| 输入 | 论文 PDF/链接 |
+| 输出 | 视觉图解图片 |
+
+> 与 `nature-figure` 的区别：figure 用 Python/R 代码生成数据驱动图表；comic 用生图模型生成概念图解。数据图→figure，概念图→comic。
+
+### ⑭ paper-deck — 高质感 AIGC 幻灯片（逐页生图）
+
+| 属性 | 值 |
+|---|---|
+| 版本 | - |
+| 来源 | zsyggg/paper-craft-skills |
+| 核心功能 | 论文→内容分析→逐页叙事导演→生图模型生成 16:9 slide image→合成 PPTX/PDF。4 种风格：journal-minimal（Nature/IEEE）、business-research（战略报告）、warm-notes（学习笔记）、liquid-glass（Apple 风） |
+| 触发词 | 论文PPT、高质感幻灯片、逐页生图PPT、不像AI的PPT、AIGC幻灯片 |
+| 输入 | 论文 PDF/链接/笔记.md |
+| 输出 | .pptx + .pdf |
+
+> 与 `nature-paper2ppt` 的区别：paper2ppt 用 python-pptx 生成文字排版式 PPTX（快速）；deck 用生图模型逐页生成视觉 slide image（设计感强、耗时较长）。
+
 ---
 
 ## 共享资源 `_shared/`
@@ -209,6 +251,15 @@ nature/
                                     │paper-to-patent│
                                     │ 论文转专利     │
                                     └───────────────┘
+
+                             (paper-craft 补充)
+
+              ┌──────────────────┼──────────────────┐
+              ↓                  ↓                  ↓
+        ┌────────────┐  ┌──────────────┐  ┌──────────────┐
+        │paper-analyzer│ │paper-comic  │  │  paper-deck   │
+        │ 深度HTML解读 │  │ 方法概念图  │  │ AIGC高质感PPT │
+        └────────────┘  └──────────────┘  └──────────────┘
 ```
 
 ---
@@ -221,17 +272,28 @@ nature/
 | 中等迭代 | `figure` (2.0), `paper2ppt` (2.0), `reader` (2.0), `ac-search` (2.0), `citation` (2.0), `data` (2.0) |
 | 稳定可用 | `writing` (1.0), `response` (1.0) |
 | 早期开发 | `reviewer` (0.1.0), `paper-to-patent` (未标注) |
+| 未标注版本 | `paper-analyzer`, `paper-comic`, `paper-deck`（来自 paper-craft-skills） |
 
 ---
 
 ## 更新方式
 
+### nature-skills（元一哲）
+
 ```bash
 cd /path/to/nature-skills && git pull
-# 覆盖复制到 skills/nature/
 cp -R skills/_shared /Users/ganxuanzhi/skills/nature/_shared
 cp -R skills/nature-polishing /Users/ganxuanzhi/skills/nature/
 # ... 其他更新的 skill
+```
+
+### paper-craft-skills（zsyggg）
+
+```bash
+cd /path/to/paper-craft-skills && git pull
+cp -R skills/paper-analyzer /Users/ganxuanzhi/skills/nature/
+cp -R skills/paper-comic /Users/ganxuanzhi/skills/nature/
+cp -R skills/paper-deck /Users/ganxuanzhi/skills/nature/
 ```
 
 ---
