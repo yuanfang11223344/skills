@@ -5,12 +5,14 @@
 根目录：`/Users/ganxuanzhi/skills`
 管理入口：[MANAGEMENT.md](MANAGEMENT.md) | [README.md](README.md)
 
-## 分类
+## 分类（核心规则：一个来源 = 一个分类目录）
 
-| 分类 | 说明 | 入口 |
-|---|---|---|
-| `nature/` | 学术写作全流程（11 个 skill） | [nature/README.md](nature/README.md) |
-| `paper-craft/` | 论文可视化与呈现（3 个 skill） | [paper-craft/README.md](paper-craft/README.md) |
+不同 GitHub 仓库/作者的 skill 分属独立分类目录，永不混用。新来源必须建新分类。
+
+| 分类 | 来源 | 作者 | 数量 | 入口 |
+|---|---|---|---|---|
+| `nature/` | `Yuan1z0825/nature-skills` | 袁一哲 | 11 | [nature/README.md](nature/README.md) |
+| `paper-craft/` | `zsyggg/paper-craft-skills` | zsyggg | 3 | [paper-craft/README.md](paper-craft/README.md) |
 
 ---
 

@@ -86,12 +86,23 @@ description: <一句话描述 skill 功能，供 AI 工具在 skill 列表中展
 
 ## 添加分类目录
 
-同类 skill 统一放在一个分类子目录下：
+**核心原则：一个来源 = 一个分类目录。不同 GitHub 仓库/作者的 skill 必须放在独立分类目录下，绝不可混入已有分类。**
 
 ```bash
-mkdir -p skills/<category>
-cp -R /path/to/skill-folder skills/<category>/
+# 1. 先判断来源，确认不在已有分类中
+# 2. 新建独立分类目录
+mkdir -p skills/<new-category>
+# 3. 写入该分类的 README.md
+# 4. 复制 skill 到分类目录下
+cp -R /path/to/skill-folder skills/<new-category>/
+# 5. 创建 STATUS.md，更新 INDEX.md
 ```
+
+当前分类：
+| 分类 | 来源 |
+|---|---|
+| `nature/` | Yuan1z0825/nature-skills |
+| `paper-craft/` | zsyggg/paper-craft-skills |
 
 ## 各 AI 工具接入方式
 

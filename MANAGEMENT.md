@@ -21,6 +21,39 @@
 - GitHub 仓库：`https://github.com/yuanfang11223344/skills`
 - GitHub remote（实际）：以 `git remote -v` 输出为准（当前为 HTTPS）
 - 上游 nature-skills：`https://github.com/Yuan1z0825/nature-skills`
+- 上游 paper-craft-skills：`https://github.com/zsyggg/paper-craft-skills`
+
+## 分类核心原则：一个来源 = 一个分类目录
+
+**不同来源的 skill 必须放在独立的分类目录下，绝不混入已有分类。**
+
+| 规则 | 说明 |
+|---|---|
+| 来源隔离 | 每个 GitHub 仓库 / 作者 / 项目的 skill 独占一个分类目录 |
+| 分类命名 | 使用来源仓库名或作者名，小写连字符：`nature`、`paper-craft` |
+| 混入禁止 | 不要把 A 来源的 skill 放入 B 来源的分类目录 |
+| 新建优先 | 新来源 → 新建分类目录 → 独立 README.md → 再放 skill |
+
+### 当前分类映射
+
+| 分类目录 | 来源 | 作者 |
+|---|---|---|
+| `nature/` | `Yuan1z0825/nature-skills` | 袁一哲 |
+| `paper-craft/` | `zsyggg/paper-craft-skills` | zsyggg |
+
+### 新来源接入示例
+
+```bash
+# 错误：把 A 来源的 skill 放进 nature/
+cp -R new-source/skills/foo /Users/ganxuanzhi/skills/nature/   # ❌
+
+# 正确：给新来源建独立分类目录
+mkdir -p /Users/ganxuanzhi/skills/new-source
+cp -R new-source/skills/foo /Users/ganxuanzhi/skills/new-source/
+# 再写 new-source/README.md、STATUS.md，更新 INDEX.md
+```
+
+**以后再下载任何 skill，第一步先判断来源——如果来源不在已有分类中，必须新建分类目录。**
 
 ## 每次处理流程
 
