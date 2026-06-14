@@ -101,6 +101,11 @@ git remote add origin git@github.com:yuanfang11223344/skills.git
 git push -u origin main
 ```
 
+当前状态记录：
+
+- `2026-06-15`：本地仓库已初始化，首个提交为 `9031e98`。
+- `2026-06-15`：GitHub 连接器查询 `yuanfang11223344/skills` 返回 404；SSH 推送因 host key 未验证/远端不可读失败。
+
 每次同步前先检查：
 
 ```bash
