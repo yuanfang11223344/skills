@@ -22,6 +22,8 @@
 - GitHub remote（实际）：以 `git remote -v` 输出为准（当前为 HTTPS）
 - 上游 nature-skills：`https://github.com/Yuan1z0825/nature-skills`
 - 上游 paper-craft-skills：`https://github.com/zsyggg/paper-craft-skills`
+- 上游 academic-research-skills：`https://github.com/Imbad0202/academic-research-skills`
+- 上游 superpowers：`https://github.com/obra/superpowers`
 
 ## 分类核心原则：一个来源 = 一个分类目录
 
@@ -40,6 +42,8 @@
 |---|---|---|
 | `nature/` | `Yuan1z0825/nature-skills` | 袁一哲 |
 | `paper-craft/` | `zsyggg/paper-craft-skills` | zsyggg |
+| `academic-research/` | `Imbad0202/academic-research-skills` | Imbad0202 |
+| `superpowers/` | `obra/superpowers` | obra |
 
 ### 新来源接入示例
 

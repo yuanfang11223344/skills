@@ -9,14 +9,16 @@
 
 不同 GitHub 仓库/作者的 skill 分属独立分类目录，永不混用。新来源必须建新分类。
 
-| 分类 | 来源 | 作者 | 数量 | 入口 |
-|---|---|---|---|---|
-| `nature/` | `Yuan1z0825/nature-skills` | 袁一哲 | 11 | [nature/README.md](nature/README.md) |
-| `paper-craft/` | `zsyggg/paper-craft-skills` | zsyggg | 3 | [paper-craft/README.md](paper-craft/README.md) |
+| 分类 | 来源 | 作者 | 数量 | 领域 | 入口 |
+|---|---|---|---|---|---|
+| `nature/` | `Yuan1z0825/nature-skills` | 袁一哲 | 11 | 学术写作 | [nature/README.md](nature/README.md) |
+| `paper-craft/` | `zsyggg/paper-craft-skills` | zsyggg | 3 | 论文可视化 | [paper-craft/README.md](paper-craft/README.md) |
+| `academic-research/` | `Imbad0202/academic-research-skills` | Imbad0202 | 4 | 学术研究 | [academic-research/README.md](academic-research/README.md) |
+| `superpowers/` | `obra/superpowers` | obra | 14 | 软件开发 | [superpowers/README.md](superpowers/README.md) |
 
 ---
 
-## nature/ — 学术写作全流程
+## nature/ — 学术写作全流程（11 skill）
 
 | Skill | 状态 | 主要用途 | 推荐触发 |
 | --- | --- | --- | --- |
@@ -32,7 +34,7 @@
 | `nature-reviewer` | Draft | 投稿前模拟 Nature 风格审稿和交叉评估 | 模拟审稿、预审、审稿人视角 |
 | `nature-writing` | Active | 从 claims、结果和笔记起草或重构论文段落 | 写论文、起草摘要/引言/方法/讨论 |
 
-## paper-craft/ — 论文可视化与呈现
+## paper-craft/ — 论文可视化与呈现（3 skill）
 
 | Skill | 状态 | 主要用途 | 推荐触发 |
 | --- | --- | --- | --- |
@@ -40,82 +42,81 @@
 | `paper-comic` | Active | 论文方法图解（生图模型，paper-figure/sketchnote 两风格） | 论文图解、方法图、概念图、论文配图 |
 | `paper-deck` | Active | 论文→AIGC 高质感幻灯片（逐页生图，4 种风格，PPTX/PDF） | 论文PPT、高质感幻灯片、逐页生图PPT |
 
+## academic-research/ — 学术研究全流程（4 skill）
+
+| Skill | 状态 | 版本 | 主要用途 | 推荐触发 |
+| --- | --- | --- | --- | --- |
+| `deep-research` | Active | 2.9.4 | 13-agent 深度研究管道，7 种模式，APA 7.0 报告 | 深度研究、文献综述、系统综述、meta-analysis |
+| `academic-paper` | Active | 3.2.0 | 12-agent 论文写作管道，10 种模式，LaTeX/DOCX/PDF | 写论文、学术论文、论文格式转换 |
+| `academic-paper-reviewer` | Active | 1.10.0 | 5-reviewer 多视角审稿，6 种模式，含校准 | 审稿、peer review、模拟审稿 |
+| `academic-pipeline` | Active | 3.12.0 | 10 阶段全流程编排：研究→写作→审稿→定稿 | 全流程、research-to-publication |
+
+> 与 nature/ 重叠但更重量级：nature 做轻量快速任务，academic-research 做多 agent 深度管道。
+
+## superpowers/ — 软件开发工作流（14 skill）
+
+| Skill | 状态 | 主要用途 | 触发场景 |
+| --- | --- | --- | --- |
+| `using-superpowers` | Active | 入口：建立如何使用和发现 skill | 任何对话开始 |
+| `brainstorming` | Active | 创意工作前探索需求 | 创建功能、修改行为 |
+| `writing-plans` | Active | 为多步骤任务编写实施计划 | 有 spec 或需求 |
+| `executing-plans` | Active | 执行计划，带审查检查点 | 有写好的计划 |
+| `dispatching-parallel-agents` | Active | 并行调度 2+ 个独立任务 | 多个无依赖任务 |
+| `subagent-driven-development` | Active | 子 agent 驱动开发 | 需要并行开发 |
+| `test-driven-development` | Active | 实现功能前先写测试 | 实现功能、修复 bug |
+| `systematic-debugging` | Active | 系统化调试 | bug、测试失败 |
+| `verification-before-completion` | Active | 完成前验证 | 即将 commit/PR |
+| `requesting-code-review` | Active | 请求代码审查 | 完成任务、合并前 |
+| `receiving-code-review` | Active | 接收代码审查 | 收到审查反馈 |
+| `finishing-a-development-branch` | Active | 分支完成/合并 | feature 分支完成 |
+| `using-git-worktrees` | Active | Git worktree 隔离 | 开始新 feature |
+| `writing-skills` | Active | 编写/维护 skill | 创建/编辑 skill |
+
 ---
 
 ## Markdown 入口目录
 
 ```text
-/Users/ganxuanzhi/skills/README.md                    ← 根目录规则说明
-/Users/ganxuanzhi/skills/MANAGEMENT.md                 ← 管理手册
-/Users/ganxuanzhi/skills/INDEX.md                      ← 本文件，索引
-/Users/ganxuanzhi/skills/nature/README.md              ← nature 分类入口
-/Users/ganxuanzhi/skills/nature/nature-academic-search/SKILL.md
-/Users/ganxuanzhi/skills/nature/nature-citation/SKILL.md
-/Users/ganxuanzhi/skills/nature/nature-data/SKILL.md
-/Users/ganxuanzhi/skills/nature/nature-figure/SKILL.md
-/Users/ganxuanzhi/skills/nature/nature-paper-to-patent/SKILL.md
-/Users/ganxuanzhi/skills/nature/nature-paper2ppt/SKILL.md
-/Users/ganxuanzhi/skills/nature/nature-polishing/SKILL.md
-/Users/ganxuanzhi/skills/nature/nature-reader/SKILL.md
-/Users/ganxuanzhi/skills/nature/nature-response/SKILL.md
-/Users/ganxuanzhi/skills/nature/nature-reviewer/SKILL.md
-/Users/ganxuanzhi/skills/nature/nature-writing/SKILL.md
-/Users/ganxuanzhi/skills/paper-craft/README.md         ← paper-craft 分类入口
-/Users/ganxuanzhi/skills/paper-craft/paper-analyzer/SKILL.md
-/Users/ganxuanzhi/skills/paper-craft/paper-comic/SKILL.md
-/Users/ganxuanzhi/skills/paper-craft/paper-deck/SKILL.md
+/Users/ganxuanzhi/skills/README.md                         ← 根目录规则说明
+/Users/ganxuanzhi/skills/MANAGEMENT.md                      ← 管理手册
+/Users/ganxuanzhi/skills/INDEX.md                           ← 本文件，索引
+/Users/ganxuanzhi/skills/nature/README.md                   ← nature 分类入口
+/Users/ganxuanzhi/skills/paper-craft/README.md              ← paper-craft 分类入口
+/Users/ganxuanzhi/skills/academic-research/README.md        ← academic-research 分类入口
+/Users/ganxuanzhi/skills/superpowers/README.md              ← superpowers 分类入口
 ```
+
+完整 SKILL.md 列表运行：`/Users/ganxuanzhi/skills/_management/scripts/list-skills.sh`
 
 ---
 
 ## 调度建议
 
-用户给出任务时，先判断分类，再选 skill：
+### 按领域分类
 
-### nature 类
-
-| 阶段 | 首选 skill | 可联动 skill |
-| --- | --- | --- |
-| 找资料 | `nature-academic-search` | `nature-citation` |
-| 读论文 | `nature-reader` | `nature-academic-search` |
-| 写初稿 | `nature-writing` | `nature-citation`, `nature-data` |
-| 润色与中译英 | `nature-polishing` | `nature-citation` |
-| 补引用 | `nature-citation` | `nature-academic-search` |
-| 做数据图表 | `nature-figure` | `nature-data` |
-| 做汇报 | `nature-paper2ppt` | `nature-reader`, `nature-figure` |
-| 回审稿人 | `nature-response` | `nature-polishing`, `nature-citation` |
-| 投稿前自审 | `nature-reviewer` | `nature-writing`, `nature-polishing` |
-| 转专利 | `nature-paper-to-patent` | `nature-reader` |
-
-### paper-craft 类
-
-| 阶段 | 首选 skill | 可联动 skill |
-| --- | --- | --- |
-| 论文深度解读 | `paper-analyzer` | `nature-reader`, `nature-academic-search` |
-| 方法概念图解 | `paper-comic` | `nature-reader`, `nature-figure` |
-| 高质感视觉PPT | `paper-deck` | `nature-reader`, `nature-figure` |
+| 用户想做什么 | 领域 | 首选分类 |
+|---|---|---|
+| 写论文、润色、审稿回复 | 学术写作 | `nature/` |
+| 论文解读、方法图、AIGC 幻灯片 | 论文可视化 | `paper-craft/` |
+| 深度文献研究、多 agent 论文管道 | 学术研究 | `academic-research/` |
+| 软件开发、调试、代码审查 | 软件开发 | `superpowers/` |
 
 ### 跨分类关键区分
 
-| 容易混淆 | 选哪个 | 为什么 |
+| 混淆场景 | 选哪个 | 为什么 |
 |---|---|---|
-| 翻译 vs 解读 | `nature-reader` (翻译) / `paper-analyzer` (深度解读) | reader 输出中英对照 Markdown，analyzer 输出深度 HTML 长文 |
-| 数据图 vs 概念图 | `nature-figure` (数据图) / `paper-comic` (概念图) | figure 用 Python/R 代码绘数据，comic 用生图模型画概念 |
-| 文字PPT vs 视觉PPT | `nature-paper2ppt` (文字排版) / `paper-deck` (逐页生图) | paper2ppt 快速文字排版，deck 设计感强但耗时 |
+| 轻量审稿 vs 深度审稿 | `nature-reviewer` (轻量) / `academic-paper-reviewer` (深度) | academic-research 有 5 位审稿人+6 种模式 |
+| 起草段落 vs 完整论文 | `nature-writing` (起草) / `academic-paper` (完整) | academic-research 12-agent 全管道 |
+| 简单检索 vs 深度研究 | `nature-academic-search` (检索) / `deep-research` (研究) | academic-research 13-agent 管道 |
+| 文字PPT vs 视觉PPT | `nature-paper2ppt` (文字) / `paper-deck` (视觉) | paper-craft 逐页生图 |
+| 数据图 vs 概念图 | `nature-figure` (数据图) / `paper-comic` (概念图) | paper-craft 生图模型 |
 
 ---
 
 ## 维护命令
 
-列出当前 skill：
-
 ```bash
 /Users/ganxuanzhi/skills/_management/scripts/list-skills.sh
-```
-
-检查 Git 状态：
-
-```bash
 git -C /Users/ganxuanzhi/skills status --short
 ```
 
@@ -123,7 +124,7 @@ git -C /Users/ganxuanzhi/skills status --short
 
 ## 跨工具加载状态
 
-| 工具 | 软链接 | 文件可读 | 说明 |
-|---|---|---|---|
-| Claude Code | OK | OK | `~/.claude/skills` → skills | 重启 session 生效 |
-| Codex | OK | OK | `~/.codex/skills/shared-user-skills` → skills |
+| 工具 | 软链接 | 说明 |
+|---|---|---|
+| Claude Code | OK | `~/.claude/skills` → skills |
+| Codex | OK | `~/.codex/skills/shared-user-skills` → skills |
