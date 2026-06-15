@@ -48,6 +48,39 @@
 | `superpowers/` | `obra/superpowers` | obra |
 | `firecrawl/` | `firecrawl/skills` + `firecrawl/cli` | firecrawl |
 
+## 当前任务状态
+
+更新时间：`2026-06-15`
+
+| 项目 | 当前状态 |
+|---|---|
+| 分类总数 | 5 个：`nature/`、`paper-craft/`、`academic-research/`、`superpowers/`、`firecrawl/` |
+| Skill 总数 | 47 个 |
+| `STATUS.md` 覆盖 | 47/47，全部具备情况说明 |
+| 本地 Git | `main` 分支，已设置 upstream |
+| GitHub 同步 | `origin/main` 可达，远端为 `https://github.com/yuanfang11223344/skills.git` |
+| Claude 共享 | `~/.claude/skills` 指向 `/Users/ganxuanzhi/skills` |
+| Codex 共享 | `~/.codex/skills/shared-user-skills` 指向 `/Users/ganxuanzhi/skills` |
+| Obsidian 镜像 | 位于 `/Users/ganxuanzhi/Documents/Obsidian Vault/AI Skills 管理`，每次维护后同步 |
+
+### 当前分类任务
+
+| 分类 | 数量 | 管理任务 | 调度定位 |
+|---|---:|---|---|
+| `nature/` | 11 | 保持轻量学术写作、读文献、润色、审稿回复链路稳定 | 论文日常处理首选 |
+| `paper-craft/` | 3 | 保持论文可视化、HTML 长文、视觉 PPT 与 nature 区分清楚 | 视觉呈现和生图型输出 |
+| `academic-research/` | 4 | 管理多 agent 深度研究和完整论文管道 | 深度研究、完整论文工作流 |
+| `superpowers/` | 14 | 管理软件开发方法论、调试、计划、评审流程 | 编程/工程任务的工作法 |
+| `firecrawl/` | 15 | 管理 web 搜索、抓取、交互、SDK 集成技能 | 网页数据提取与应用集成 |
+
+### 当前维护待办
+
+1. 新增 skill 时继续执行「一个来源 = 一个分类目录」。
+2. 每次新增或更新后运行 `_management/scripts/list-skills.sh`，确认 `SKILL.md` 和 `STATUS.md` 数量一致。
+3. Obsidian 的 `Skills 管理手册.md`、`Skills 索引.md`、`Skills 维护日志.md` 必须和本目录同步。
+4. GitHub 同步失败时写入 `_management/last-unsynced.md`；同步成功后删除该文件。
+5. 上游更新只检测和提醒，不自动覆盖本地 skill。
+
 ### 新来源接入示例
 
 ```bash
@@ -243,6 +276,7 @@ git push -u origin main
 
 - `2026-06-15`：本地仓库已初始化并推送成功，upstream 已设置。
 - `2026-06-15`：Git 仓库 `yuanfang11223344/skills` 已在 GitHub 创建，HTTPS push 正常。
+- `2026-06-15`：当前 5 个分类、47 个 skill，`STATUS.md` 覆盖率 100%。
 
 ### 每次同步前先检查
 

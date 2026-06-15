@@ -11,7 +11,7 @@ find "$ROOT" \
   while IFS= read -r file; do
     name="$(awk -F': *' '/^name:/ {print $2; exit}' "$file" | tr -d '"')"
     desc="$(awk '
-      /^description:[[:space:]]*>-/ {
+      /^description:[[:space:]]*[>|]-?/ {
         in_desc=1
         next
       }
