@@ -39,7 +39,7 @@ skills/
 ├── academic-research/         # 学术研究（4 skill，Imbad0202/academic-research-skills）
 ├── superpowers/               # 软件开发（14 skill，obra/superpowers）
 ├── firecrawl/                 # web 数据提取（15 skill，firecrawl org）
-└── 调研/                       # 学术调研全流程（30 skill，SkillsMP 汇总/4阶段）
+└── 调研/                       # 学术调研全流程（79 skill，SkillsMP 汇总/4阶段：发现45+分析19+产出12+推送4）
 ```
 
 | 分类 | 来源 | 领域 | 数量 | 入口 |
@@ -49,7 +49,7 @@ skills/
 | `academic-research/` | Imbad0202/academic-research-skills | 学术研究 | 4 | [academic-research/README.md](academic-research/README.md) |
 | `superpowers/` | obra/superpowers | 软件开发 | 14 | [superpowers/README.md](superpowers/README.md) |
 | `firecrawl/` | firecrawl/skills + firecrawl/cli | web 数据 | 15 | [firecrawl/README.md](firecrawl/README.md) |
-| `调研/` | SkillsMP 多源汇总 | 学术调研 | 30 | [调研/README.md](调研/README.md) |
+| `调研/` | SkillsMP 多源汇总 | 学术调研 | 79 | [调研/README.md](调研/README.md) |
 
 ## Skill 文件格式
 

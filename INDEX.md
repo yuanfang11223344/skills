@@ -15,7 +15,7 @@
 | `academic-research/` | `Imbad0202/academic-research-skills` | Imbad0202 | 4 | 学术研究 | [academic-research/README.md](/Users/ganxuanzhi/skills/academic-research/README.md) |
 | `superpowers/` | `obra/superpowers` | obra | 14 | 软件开发 | [superpowers/README.md](/Users/ganxuanzhi/skills/superpowers/README.md) |
 | `firecrawl/` | `firecrawl/skills + firecrawl/cli` | firecrawl | 15 | web 数据提取 | [firecrawl/README.md](/Users/ganxuanzhi/skills/firecrawl/README.md) |
-| `调研/` | SkillsMP 多源汇总 | 社区 | 30 | 学术调研全流程 | [调研/README.md](/Users/ganxuanzhi/skills/调研/README.md) |
+| `调研/` | SkillsMP 多源汇总 | 社区 | 79 | 学术调研全流程 | [调研/README.md](/Users/ganxuanzhi/skills/调研/README.md) |
 
 ## 总览表
 
@@ -68,6 +68,7 @@
 | `firecrawl-parse` | `firecrawl` | Active | 无 | Efficiently extract and convert the cont | the user requests to parse / read |
 | `firecrawl-scrape` | `firecrawl` | Active | 无 | Extract clean markdown from any URL, inc | the user provides a URL and wants its content /  |
 | `firecrawl-search` | `firecrawl` | Active | 无 | Web search with full page content extrac | the user asks to search the web / find articles |
+| `调研/` | `调研` | Active | — | **79 个 skill（发现45/分析19/产出12/推送4）**，覆盖论文搜索、IEEE/ACM/PubMed、AI资讯、公司动态、社交媒体、视频播客等全渠道调研 | 详见 [调研/README.md](/Users/ganxuanzhi/skills/调研/README.md) |
 
 ## Markdown 入口目录
 
@@ -79,6 +80,7 @@
 - [academic-research/README.md](/Users/ganxuanzhi/skills/academic-research/README.md): 学术研究 分类入口
 - [superpowers/README.md](/Users/ganxuanzhi/skills/superpowers/README.md): 软件开发 分类入口
 - [firecrawl/README.md](/Users/ganxuanzhi/skills/firecrawl/README.md): web 数据提取 分类入口
+- [调研/README.md](/Users/ganxuanzhi/skills/调研/README.md): 学术调研全流程 分类入口（79 skill，4阶段）
 - [nature/nature-academic-search/SKILL.md](/Users/ganxuanzhi/skills/nature/nature-academic-search/SKILL.md): 多源文献检索、引文核对、MeSH 检索策略、文献文件转换与参考文献管理。
 - [nature/nature-citation/SKILL.md](/Users/ganxuanzhi/skills/nature/nature-citation/SKILL.md): 为论文段落、手稿或论点自动寻找高质量支撑文献，并导出参考文献管理器可用格式。
 - [nature/nature-data/SKILL.md](/Users/ganxuanzhi/skills/nature/nature-data/SKILL.md): 撰写、审计或修改 Data Availability、代码和数据共享、仓库选择、FAIR 元数据
