@@ -1,8 +1,8 @@
 # 调研 — 学术调研全流程 AI 工具箱
 
-> 来源：SkillsMP 搜索推荐（https://skillsmp.com）
-> 安装日期：2026-06-15
-> 总计：30 个 skill，分 4 个阶段
+> 来源：SkillsMP 搜索推荐（https://skillsmp.com）+ GitHub 直接检索
+> 安装日期：2026-06-15 | 更新：2026-06-15（新增 IEEE/ACM/PubMed/DBLP 等数据库覆盖）
+> 总计：59 个 skill（发现28 / 分析17 / 产出10 / 推送4），分 4 个阶段
 
 "从前期自动调研到后期生成资讯简报和深度报告"的完整学术调研链路。
 
@@ -119,3 +119,70 @@
 - 部分 skill 为基础版本（标注来源的仓库 clone 失败或为空），建议从上游 GitHub 获取完整文件覆盖
 - `firecrawl-monitor` 需要 Firecrawl API key
 - 30 个 skill 来自 15+ 个不同 GitHub 仓库
+
+
+## 第二轮补充（2026-06-15）：IEEE/ACM/PubMed/DBLP/Crossref 等多数据库覆盖
+
+### 发现阶段新增（14 skill）
+
+| Skill | 功能 | 来源 |
+|---|---|---|
+| `scholar-megasearch` | **20+数据库并行搜索**：arXiv/Semantic Scholar/Crossref/OpenAlex/PubMed/DBLP/Europe PMC/Zenodo等，去重+互验证排序+自动获取PDF | TaewoooPark/scholar-megasearch |
+| `scholar-lab-radar` | 跟踪研究实验室过去N年产出(OpenAlex)，构建时序知识图谱，生成进化报告 | TaewoooPark/scholar-lab-radar |
+| `literature-search` | 15+源学术文献搜索，PMID/DOI/标题去重，反思循环填补覆盖缺口 | beita6969/scienceclaw |
+| `literature-scienceclaw` | 通用文献搜索路由（ScienceClaw生态） | beita6969/scienceclaw |
+| `research-literature` | 研究文献深度搜索+分析 | beita6969/scienceclaw |
+| `academic-literature-search` | 学术文献综合搜索 | beita6969/scienceclaw |
+| `multi-search-engine` | 多搜索引擎并行调度 | beita6969/scienceclaw |
+| `crossref-search` | **CrossRef API搜索**（覆盖IEEE/ACM/Springer/Elsevier元数据） | beita6969/scienceclaw |
+| `openalex-search` | **OpenAlex API搜索**（覆盖2.5亿+学术作品） | beita6969/scienceclaw |
+| `pubmed-search` | PubMed/生物医学文献搜索 | beita6969/scienceclaw |
+| `semantic-scholar-v2` | Semantic Scholar API搜索（增强版） | beita6969/scienceclaw |
+| `arxiv-search-v2` | arXiv搜索（增强版） | beita6969/scienceclaw |
+| `biorxiv-search` | bioRxiv/medRxiv预印本搜索 | beita6969/scienceclaw |
+| `dblp-search` | **DBLP CS会议/期刊搜索**（IEEE/ACM会议覆盖） | beita6969/scienceclaw |
+
+### 分析阶段新增（9 skill）
+
+| Skill | 功能 | 来源 |
+|---|---|---|
+| `academic-research-writer` | IEEE/ACM/PubMed/ScienceDirect/arXiv为主要数据库，源验证+IEEE格式引用+结构化工作流 | endigo/claude-skills |
+| `novelty-assessment` | 论文新颖性/创新点评估 | lingzhi227/agent-research-skills |
+| `atomic-decomposition` | 论文原子化解构（claim级别分析） | lingzhi227/agent-research-skills |
+| `paper-analysis-v2` | 论文分析（增强版） | beita6969/scienceclaw |
+| `citation-analysis` | 引用分析+引文网络 | beita6969/scienceclaw |
+| `research-reflection` | 研究反思+方向评估 | beita6969/scienceclaw |
+| `peer-review-v2` | 同行评审（增强版） | beita6969/scienceclaw |
+| `meta-analysis` | 荟萃分析（PRISMA+效应量） | beita6969/scienceclaw |
+| `systematic-review` | 系统综述 | beita6969/scienceclaw |
+
+### 产出阶段新增（6 skill）
+
+| Skill | 功能 | 来源 |
+|---|---|---|
+| `article-writing` | 学术文章写作 | beita6969/scienceclaw |
+| `review-writing` | 综述文章写作 | beita6969/scienceclaw |
+| `latex-writing` | LaTeX写作 | beita6969/scienceclaw |
+| `paper-writing` | 论文写作 | beita6969/scienceclaw |
+| `scientific-manuscript` | 科学稿件撰写 | beita6969/scienceclaw |
+| `paper-assembly` | 论文组装（多章节拼接+一致性检查） | lingzhi227/agent-research-skills |
+
+---
+
+## 数据库覆盖率（更新后）
+
+| 数据库/出版商 | 覆盖 skill | 方式 |
+|---|---|---|
+| **arXiv** | arxiv-monitor, scholar-megasearch, arxiv-search-v2 | 直接API |
+| **IEEE Xplore** | scholar-megasearch (via OpenAlex/Crossref), crossref-search, openalex-search, dblp-search | 间接覆盖 |
+| **ACM DL** | scholar-megasearch (via DBLP/Crossref), dblp-search | 间接覆盖 |
+| **PubMed** | pubmed-search, scholar-megasearch | 直接API |
+| **Semantic Scholar** | semantic-scholar, semantic-scholar-v2, scholar-megasearch | 直接API |
+| **CrossRef** | crossref-search, scholar-megasearch | 直接API |
+| **OpenAlex** | openalex-search, scholar-megasearch, scholar-lab-radar | 直接API |
+| **DBLP (CS会议)** | dblp-search, scholar-megasearch | 直接API |
+| **bioRxiv/medRxiv** | biorxiv-search | 直接API |
+| **Springer/Nature** | scholar-megasearch (via Crossref/OpenAlex) | 间接覆盖 |
+| **Elsevier/ScienceDirect** | scholar-megasearch (via Crossref/OpenAlex) | 间接覆盖 |
+| **Scopus** | papers, search-papers | 间接覆盖 |
+
