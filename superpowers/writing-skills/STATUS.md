@@ -8,11 +8,18 @@
 - 入口：`SKILL.md`
 - 分类：`superpowers`
 - 来源：`https://github.com/obra/superpowers`
+- 版本：`无 version 字段`
 - 最近维护：`2026-06-15`
 
 ## 主要用途
 
-Use when creating new skills, editing existing skills, or verifying skills work before deployment ---  # Writing Skills  ## Overview  **Writing skills IS Test-Driven Development applied to process doc
+Use when creating new skills, editing existing skills, or verifying skills work before deployment --- # Writing Skills ## Overview **Writing skills IS Test-Driven Development applied to process doc
+
+## 推荐触发
+
+- Use when creating new skills
+- editing existing skills
+- or verifying skills work before deployment
 
 ## 调度关系
 
@@ -22,6 +29,7 @@ Use when creating new skills, editing existing skills, or verifying skills work 
 ## 维护记录
 
 - `2026-06-15`：从 https://github.com/obra/superpowers 下载安装，创建情况说明。
+- `2026-06-15`：按 MANAGEMENT.md 补齐 STATUS 模板字段并校验版本、来源、索引同步。
 
 ## 待办与风险
 

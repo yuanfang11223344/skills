@@ -8,11 +8,18 @@
 - 入口：`SKILL.md`
 - 分类：`firecrawl`
 - 来源：`https://github.com/firecrawl/skills`
+- 版本：`0.1.0`
 - 最近维护：`2026-06-15`
 
 ## 主要用途
 
 Integrate Firecrawl `/search` into product code and agent workflows. Use when an app needs discovery before extraction, when the feature starts with a query instead of a URL, or when the system should
+
+## 推荐触发
+
+- an app needs discovery before extraction
+- when the feature starts with a query instead of a URL
+- the system should search the web and optionally hydrate result content
 
 ## 调度关系
 
@@ -22,6 +29,7 @@ Integrate Firecrawl `/search` into product code and agent workflows. Use when an
 ## 维护记录
 
 - `2026-06-15`：从 firecrawl 下载安装，创建情况说明。
+- `2026-06-15`：按 MANAGEMENT.md 补齐 STATUS 模板字段并校验版本、来源、索引同步。
 
 ## 待办与风险
 

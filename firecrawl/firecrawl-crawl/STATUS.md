@@ -8,11 +8,19 @@
 - 入口：`SKILL.md`
 - 分类：`firecrawl`
 - 来源：`https://github.com/firecrawl/cli`
+- 版本：`无 version 字段`
 - 最近维护：`2026-06-15`
 
 ## 主要用途
 
 Bulk extract content from an entire website or site section. Use this skill when the user wants to crawl a site, extract all pages from a docs section, bulk-scrape multiple pages following links, or s
+
+## 推荐触发
+
+- the user wants to crawl a site
+- extract all pages from a docs section
+- bulk-scrape multiple pages following links
+- "crawl
 
 ## 调度关系
 
@@ -22,6 +30,7 @@ Bulk extract content from an entire website or site section. Use this skill when
 ## 维护记录
 
 - `2026-06-15`：从 firecrawl 下载安装，创建情况说明。
+- `2026-06-15`：按 MANAGEMENT.md 补齐 STATUS 模板字段并校验版本、来源、索引同步。
 
 ## 待办与风险
 

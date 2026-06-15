@@ -7,14 +7,13 @@
 - 路径：`/Users/ganxuanzhi/skills/paper-craft/paper-comic`
 - 入口：`SKILL.md`
 - 分类：`paper-craft`
-- 来源：`https://github.com/zsyggg/paper-craft-skills`（MIT）
+- 来源：`https://github.com/zsyggg/paper-craft-skills`
+- 版本：`无 version 字段`
 - 最近维护：`2026-06-15`
 
 ## 主要用途
 
-论文方法图解——用视觉图解讲清楚一篇论文的核心方法。先分析论文方法，推荐封面/概述图/机制细节图的生成方案，用户确认范围、张数、语言、风格后生成。支持 2 种风格：paper-figure（论文框架图风）、sketchnote（温暖笔记风）。
-
-与 `nature-figure` 的区别：nature-figure 用 Python/R 代码生成 matplotlib/ggplot2 图表（数据驱动）；paper-comic 用生图模型生成视觉图解（AIGC 驱动），更偏向论文方法学概念图的表达。
+论文方法图解——用视觉图解讲清楚一篇论文的核心方法。先分析论文方法，推荐封面/概述图/机制细节图的生成方案，用户确认范围、张数、语言、风格后生成。支持 2 种风格：paper-figure（论文框架图风）、sketchnote（温暖笔记风）。 与 `nature-figure` 的区别：nature-figure 用 Python/R 代码生成 matplotlib/ggplot2 图表（数据驱动）；paper-comic 用生图模型生成视觉图解（AIGC 驱动），更偏向论文方法学概念图的表达。
 
 ## 推荐触发
 
@@ -32,6 +31,7 @@
 ## 维护记录
 
 - `2026-06-15`：从 zsyggg/paper-craft-skills 下载安装，创建情况说明。
+- `2026-06-15`：按 MANAGEMENT.md 补齐 STATUS 模板字段并校验版本、来源、索引同步。
 
 ## 待办与风险
 

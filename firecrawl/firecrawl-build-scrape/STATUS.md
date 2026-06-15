@@ -8,11 +8,19 @@
 - 入口：`SKILL.md`
 - 分类：`firecrawl`
 - 来源：`https://github.com/firecrawl/skills`
+- 版本：`0.1.0`
 - 最近维护：`2026-06-15`
 
 ## 主要用途
 
-Integrate Firecrawl `/scrape` into product code for single-page extraction. Use when an app already has a URL and needs markdown, HTML, links, screenshots, metadata, or structured page output. Prefer 
+Integrate Firecrawl `/scrape` into product code for single-page extraction. Use when an app already has a URL and needs markdown, HTML, links, screenshots, metadata, or structured page output. Prefer
+
+## 推荐触发
+
+- an app already has a URL and needs markdown
+- HTML
+- links
+- screenshots
 
 ## 调度关系
 
@@ -22,6 +30,7 @@ Integrate Firecrawl `/scrape` into product code for single-page extraction. Use 
 ## 维护记录
 
 - `2026-06-15`：从 firecrawl 下载安装，创建情况说明。
+- `2026-06-15`：按 MANAGEMENT.md 补齐 STATUS 模板字段并校验版本、来源、索引同步。
 
 ## 待办与风险
 

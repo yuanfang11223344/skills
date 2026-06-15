@@ -7,14 +7,13 @@
 - 路径：`/Users/ganxuanzhi/skills/paper-craft/paper-deck`
 - 入口：`SKILL.md`
 - 分类：`paper-craft`
-- 来源：`https://github.com/zsyggg/paper-craft-skills`（MIT）
+- 来源：`https://github.com/zsyggg/paper-craft-skills`
+- 版本：`无 version 字段`
 - 最近维护：`2026-06-15`
 
 ## 主要用途
 
-将论文/技术文章制作成高真实感 AIGC 幻灯片。先做叙事结构和逐页视觉导演，再调用生图模型生成 16:9 slide image，最后合成为 PPTX/PDF。4 种风格：journal-minimal（Nature/IEEE 学术风）、business-research（战略报告）、warm-notes（学习笔记）、liquid-glass（Apple 风）。
-
-与 `nature-paper2ppt` 的区别：nature-paper2ppt 用 python-pptx 生成文字排版式 PPTX；paper-deck 用生图模型逐页生成视觉 slide image 再合成，幻灯片更像设计稿而非模板。
+将论文/技术文章制作成高真实感 AIGC 幻灯片。先做叙事结构和逐页视觉导演，再调用生图模型生成 16:9 slide image，最后合成为 PPTX/PDF。4 种风格：journal-minimal（Nature/IEEE 学术风）、business-research（战略报告）、warm-notes（学习笔记）、liquid-glass（Apple 风）。 与 `nature-paper2ppt` 的区别：nature-paper2ppt 用 python-pptx 生成文字排版式 PPTX；paper-deck 用生图模型逐页生成视觉 slide image 再合成，幻灯片更像设计稿而非模板。
 
 ## 推荐触发
 
@@ -32,6 +31,7 @@
 ## 维护记录
 
 - `2026-06-15`：从 zsyggg/paper-craft-skills 下载安装，创建情况说明。
+- `2026-06-15`：按 MANAGEMENT.md 补齐 STATUS 模板字段并校验版本、来源、索引同步。
 
 ## 待办与风险
 

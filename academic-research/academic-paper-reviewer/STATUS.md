@@ -8,11 +8,19 @@
 - 入口：`SKILL.md`
 - 分类：`academic-research`
 - 来源：`https://github.com/Imbad0202/academic-research-skills`
+- 版本：`1.10.0`
 - 最近维护：`2026-06-15`
 
 ## 主要用途
 
 Multi-perspective academic paper review with dynamic reviewer personas. Simulates 5 independent reviewers (EIC + 3 peer reviewers + Devil's Advocate) with field-specific expertise. Supports full revie
+
+## 推荐触发
+
+- review paper
+- peer review
+- manuscript review
+- referee report
 
 ## 调度关系
 
@@ -22,6 +30,7 @@ Multi-perspective academic paper review with dynamic reviewer personas. Simulate
 ## 维护记录
 
 - `2026-06-15`：从 https://github.com/Imbad0202/academic-research-skills 下载安装，创建情况说明。
+- `2026-06-15`：按 MANAGEMENT.md 补齐 STATUS 模板字段并校验版本、来源、索引同步。
 
 ## 待办与风险
 

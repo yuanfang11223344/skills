@@ -24,6 +24,7 @@
 - 上游 paper-craft-skills：`https://github.com/zsyggg/paper-craft-skills`
 - 上游 academic-research-skills：`https://github.com/Imbad0202/academic-research-skills`
 - 上游 superpowers：`https://github.com/obra/superpowers`
+- 调研/ 分类来自 SkillsMP (skillsmp.com) 多源汇总，30 个 skill，按 4 阶段组织
 - 上游 firecrawl-skills：`https://github.com/firecrawl/skills`
 - 上游 firecrawl-cli：`https://github.com/firecrawl/cli`
 

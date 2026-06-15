@@ -3,137 +3,144 @@
 更新时间：2026-06-15
 
 根目录：`/Users/ganxuanzhi/skills`
-管理入口：[MANAGEMENT.md](MANAGEMENT.md) | [README.md](README.md)
 
 ## 分类（核心规则：一个来源 = 一个分类目录）
 
 不同 GitHub 仓库/作者的 skill 分属独立分类目录，永不混用。新来源必须建新分类。
 
 | 分类 | 来源 | 作者 | 数量 | 领域 | 入口 |
+|---|---|---|---:|---|---|
+| `nature/` | `Yuan1z0825/nature-skills` | 袁一哲 | 11 | 学术写作 | [nature/README.md](/Users/ganxuanzhi/skills/nature/README.md) |
+| `paper-craft/` | `zsyggg/paper-craft-skills` | zsyggg | 3 | 论文可视化 | [paper-craft/README.md](/Users/ganxuanzhi/skills/paper-craft/README.md) |
+| `academic-research/` | `Imbad0202/academic-research-skills` | Imbad0202 | 4 | 学术研究 | [academic-research/README.md](/Users/ganxuanzhi/skills/academic-research/README.md) |
+| `superpowers/` | `obra/superpowers` | obra | 14 | 软件开发 | [superpowers/README.md](/Users/ganxuanzhi/skills/superpowers/README.md) |
+| `firecrawl/` | `firecrawl/skills + firecrawl/cli` | firecrawl | 15 | web 数据提取 | [firecrawl/README.md](/Users/ganxuanzhi/skills/firecrawl/README.md) |
+| `调研/` | SkillsMP 多源汇总 | 社区 | 30 | 学术调研全流程 | [调研/README.md](/Users/ganxuanzhi/skills/调研/README.md) |
+
+## 总览表
+
+| Skill | 分类 | 状态 | 版本 | 主要用途 | 推荐触发词 |
 |---|---|---|---|---|---|
-| `nature/` | `Yuan1z0825/nature-skills` | 袁一哲 | 11 | 学术写作 | [nature/README.md](nature/README.md) |
-| `paper-craft/` | `zsyggg/paper-craft-skills` | zsyggg | 3 | 论文可视化 | [paper-craft/README.md](paper-craft/README.md) |
-| `academic-research/` | `Imbad0202/academic-research-skills` | Imbad0202 | 4 | 学术研究 | [academic-research/README.md](academic-research/README.md) |
-| `superpowers/` | `obra/superpowers` | obra | 14 | 软件开发 | [superpowers/README.md](superpowers/README.md) |
-| `firecrawl/` | `firecrawl/skills` + `firecrawl/cli` | firecrawl | 15 | web 数据提取 | [firecrawl/README.md](firecrawl/README.md) |
-
----
-
-## nature/ — 学术写作全流程（11 skill）
-
-| Skill | 状态 | 主要用途 | 推荐触发 |
-| --- | --- | --- | --- |
-| `nature-academic-search` | Active | 多源文献检索、引文核对、参考文献管理 | 文献检索、查论文、引文核对、参考文献去重 |
-| `nature-citation` | Active | 给论文段落自动补充 Nature/CNS/Cell 等支撑引用 | 加引用、补文献、支撑文献、RIS/EndNote |
-| `nature-data` | Active | Data Availability、数据仓库、FAIR 元数据与数据引用 | 数据可用性、数据共享、代码可用性 |
-| `nature-figure` | Active | 高水平期刊论文图表、Python/R 科研绘图与导出 QA | 论文配图、科研绘图、作图、可视化 |
-| `nature-paper-to-patent` | Active | 科研论文、代码、图表转中国发明专利草案 | 论文转专利、权利要求、说明书、专利审查 |
-| `nature-paper2ppt` | Active | 从论文生成中文组会、文献汇报、学术 PPTX | 论文做 PPT、组会 PPT、文献汇报 |
-| `nature-polishing` | Active | Nature 风格英文润色、中译英、章节重构、LaTeX 排版 | 论文润色、学术英语、中译英、SCI 写作 |
-| `nature-reader` | Active | 论文全文精读、中英对照、图表就位、源锚点 Markdown | 读论文、论文翻译、中英文对照、精读 |
-| `nature-response` | Beta | 审稿意见逐点回复、rebuttal、修回信 | 审稿回复、大修、小修、回应 reviewer |
-| `nature-reviewer` | Draft | 投稿前模拟 Nature 风格审稿和交叉评估 | 模拟审稿、预审、审稿人视角 |
-| `nature-writing` | Active | 从 claims、结果和笔记起草或重构论文段落 | 写论文、起草摘要/引言/方法/讨论 |
-
-## paper-craft/ — 论文可视化与呈现（3 skill）
-
-| Skill | 状态 | 主要用途 | 推荐触发 |
-| --- | --- | --- | --- |
-| `paper-analyzer` | Active | 论文→深度 HTML 长文（6 轮工作流、KaTeX/Mermaid、3 种写作风格） | 论文解读、论文深度解析、HTML 论文报告 |
-| `paper-comic` | Active | 论文方法图解（生图模型，paper-figure/sketchnote 两风格） | 论文图解、方法图、概念图、论文配图 |
-| `paper-deck` | Active | 论文→AIGC 高质感幻灯片（逐页生图，4 种风格，PPTX/PDF） | 论文PPT、高质感幻灯片、逐页生图PPT |
-
-## academic-research/ — 学术研究全流程（4 skill）
-
-| Skill | 状态 | 版本 | 主要用途 | 推荐触发 |
-| --- | --- | --- | --- | --- |
-| `deep-research` | Active | 2.9.4 | 13-agent 深度研究管道，7 种模式，APA 7.0 报告 | 深度研究、文献综述、系统综述、meta-analysis |
-| `academic-paper` | Active | 3.2.0 | 12-agent 论文写作管道，10 种模式，LaTeX/DOCX/PDF | 写论文、学术论文、论文格式转换 |
-| `academic-paper-reviewer` | Active | 1.10.0 | 5-reviewer 多视角审稿，6 种模式，含校准 | 审稿、peer review、模拟审稿 |
-| `academic-pipeline` | Active | 3.12.0 | 10 阶段全流程编排：研究→写作→审稿→定稿 | 全流程、research-to-publication |
-
-> 与 nature/ 重叠但更重量级：nature 做轻量快速任务，academic-research 做多 agent 深度管道。
-
-## superpowers/ — 软件开发工作流（14 skill）
-
-| Skill | 状态 | 主要用途 | 触发场景 |
-| --- | --- | --- | --- |
-| `using-superpowers` | Active | 入口：建立如何使用和发现 skill | 任何对话开始 |
-| `brainstorming` | Active | 创意工作前探索需求 | 创建功能、修改行为 |
-| `writing-plans` | Active | 为多步骤任务编写实施计划 | 有 spec 或需求 |
-| `executing-plans` | Active | 执行计划，带审查检查点 | 有写好的计划 |
-| `dispatching-parallel-agents` | Active | 并行调度 2+ 个独立任务 | 多个无依赖任务 |
-| `subagent-driven-development` | Active | 子 agent 驱动开发 | 需要并行开发 |
-| `test-driven-development` | Active | 实现功能前先写测试 | 实现功能、修复 bug |
-| `systematic-debugging` | Active | 系统化调试 | bug、测试失败 |
-| `verification-before-completion` | Active | 完成前验证 | 即将 commit/PR |
-| `requesting-code-review` | Active | 请求代码审查 | 完成任务、合并前 |
-| `receiving-code-review` | Active | 接收代码审查 | 收到审查反馈 |
-| `finishing-a-development-branch` | Active | 分支完成/合并 | feature 分支完成 |
-| `using-git-worktrees` | Active | Git worktree 隔离 | 开始新 feature |
-| `writing-skills` | Active | 编写/维护 skill | 创建/编辑 skill |
-
----
-
-## firecrawl/ — web 数据提取（15 skill）
-
-| Skill | 主要用途 | 触发场景 |
-| --- | --- | --- |
-| `firecrawl-cli` | 总入口：搜索/抓取/交互 web | 搜索网页、抓取 URL |
-| `firecrawl-search` | Web 搜索+全文提取 | 搜索、找资料 |
-| `firecrawl-scrape` | 单页→clean markdown | scrape、grab、fetch |
-| `firecrawl-crawl` | 整站批量提取 | crawl、批量提取 |
-| `firecrawl-map` | 站点 URL 发现 | map、找到某个页面 |
-| `firecrawl-interact` | 浏览器交互（点击/填表/登录） | interact、click、fill form |
-| `firecrawl-agent` | AI 自主结构化提取（schema→JSON） | extract structured data |
-| `firecrawl-parse` | 本地文件→markdown | parse PDF、convert document |
-| `firecrawl-download` | 整站下载为本地文件 | download the site |
-| `firecrawl-monitor` | 页面变更监控+通知 | monitor、watch、track |
-| `firecrawl-build` | SDK 集成向导 | 集成 Firecrawl 到应用 |
-| `firecrawl-build-onboarding` | SDK 凭证与安装 | 需要 API key |
-| `firecrawl-build-scrape` | `/scrape` 端点代码集成 | 单页提取集成 |
-| `firecrawl-build-search` | `/search` 端点代码集成 | 发现+提取集成 |
-| `firecrawl-build-interact` | `/interact` 端点代码集成 | 动态页面集成 |
+| `nature-academic-search` | `nature` | Active | 2.0.0 | 多源文献检索、引文核对、MeSH 检索策略、文献文件转换与参考文献管理。 | 文献检索、查论文、找文献 / 引文核对、参考文献管理、文献去重 |
+| `nature-citation` | `nature` | Active | 2.0.0 | 为论文段落、手稿或论点自动寻找高质量支撑文献，并导出参考文献管理器可用格式。 | 加引用、补引用、配文献 / Nature/CNS 支撑文献 |
+| `nature-data` | `nature` | Active | 2.0.0 | 撰写、审计或修改 Data Availability、代码和数据共享、仓库选择、 | 数据可用性声明 / 数据共享、代码可用性 |
+| `nature-figure` | `nature` | Active | 2.0.0 | 创建、修改、审计和导出高水平期刊论文图表，支持 Python 或 R 后端。 | 论文配图、科研绘图、作图 / 多 panel figure |
+| `nature-paper-to-patent` | `nature` | Active | 无 | 把科研论文、技术报告、代码或图表转化为证据扎实的中国发明专利草案。 | 论文转专利 / 权利要求、说明书、摘要附图 |
+| `nature-paper2ppt` | `nature` | Active | 2.0.0 | 从论文、预印本、PDF、摘要或阅读笔记生成中文学术汇报 PPTX。 | 论文做 PPT、组会 PPT / 文献汇报、读书报告 |
+| `nature-polishing` | `nature` | Active | 6.1.0 | Nature 风格英文润色、中译英、章节重构、标题摘要改写，以及 LaTeX 页 | 论文润色、英文润色、中译英 / 学术英语、SCI 写作 |
+| `nature-reader` | `nature` | Active | 2.0.0 | 从 PDF、DOI、arXiv、HTML 或粘贴文本生成论文全文中英对照、图表就 | 读论文、精读论文 / 论文翻译、中英文对照 |
+| `nature-response` | `nature` | Beta | 1.0.0 | 起草、审计和修改逐点审稿回复、rebuttal、修回信和编辑回复。 | 审稿意见回复、逐点回复 / 大修、小修、修回信 |
+| `nature-reviewer` | `nature` | Draft | 0.1.0 | 从审稿人视角模拟 Nature 风格评审，输出多位 reviewer repor | 模拟审稿、预审 / 审稿人视角评估 |
+| `nature-writing` | `nature` | Active | 1.0.0 | 根据 claims、结果、图表、笔记或中文草稿起草和重构 Nature 风格论文 | 写论文、起草论文 / 摘要、引言、方法、实验、讨论 |
+| `paper-analyzer` | `paper-craft` | Active | 无 | 将学术论文转化为深度 HTML 长文。6 轮强制工作流：论文解析→代码仓库搜索→ | 论文解读、论文深度分析、解析论文 / 学术博客、论文科普、论文总结 |
+| `paper-comic` | `paper-craft` | Active | 无 | 论文方法图解——用视觉图解讲清楚一篇论文的核心方法。先分析论文方法，推荐封面/概 | 论文图解、方法图解、论文图示 / 论文可视化、画论文架构图 |
+| `paper-deck` | `paper-craft` | Active | 无 | 将论文/技术文章制作成高真实感 AIGC 幻灯片。先做叙事结构和逐页视觉导演，再 | 论文PPT、AI生成PPT、高质感幻灯片 / 逐页生图PPT、不像AI的PPT |
+| `academic-paper` | `academic-research` | Active | 3.2.0 | 12-agent academic paper writing pipeline | 12-agent academic paper writing pipeline. 10 mod |
+| `academic-paper-reviewer` | `academic-research` | Active | 1.10.0 | Multi-perspective academic paper review  | review paper / peer review |
+| `academic-pipeline` | `academic-research` | Active | 3.12.0 | Orchestrator for the full academic resea | academic pipeline / research to paper |
+| `deep-research` | `academic-research` | Active | 2.9.4 | Universal deep research agent team. 13-a | research / deep research |
+| `brainstorming` | `superpowers` | Active | 无 | You MUST use this before any creative wo | You MUST use this before any creative work - cre |
+| `dispatching-parallel-agents` | `superpowers` | Active | 无 | Use when facing 2+ independent tasks tha | Use when facing 2+ independent tasks that can be |
+| `executing-plans` | `superpowers` | Active | 无 | Use when you have a written implementati | Use when you have a written implementation plan  |
+| `finishing-a-development-branch` | `superpowers` | Active | 无 | Use when implementation is complete, all | Use when implementation is complete / all tests  |
+| `receiving-code-review` | `superpowers` | Active | 无 | Use when receiving code review feedback, | Use when receiving code review feedback / before |
+| `requesting-code-review` | `superpowers` | Active | 无 | Use when completing tasks, implementing  | Use when completing tasks / implementing major f |
+| `subagent-driven-development` | `superpowers` | Active | 无 | Use when executing implementation plans  | Use when executing implementation plans with ind |
+| `systematic-debugging` | `superpowers` | Active | 无 | Use when encountering any bug, test fail | Use when encountering any bug / test failure |
+| `test-driven-development` | `superpowers` | Active | 无 | Use when implementing any feature or bug | Use when implementing any feature or bugfix / be |
+| `using-git-worktrees` | `superpowers` | Active | 无 | Use when starting feature work that need | Use when starting feature work that needs isolat |
+| `using-superpowers` | `superpowers` | Active | 无 | Use when starting any conversation - est | Use when starting any conversation - establishes |
+| `verification-before-completion` | `superpowers` | Active | 无 | Use when about to claim work is complete | Use when about to claim work is complete / fixed |
+| `writing-plans` | `superpowers` | Active | 无 | Use when you have a spec or requirements | Use when you have a spec or requirements for a m |
+| `writing-skills` | `superpowers` | Active | 无 | Use when creating new skills, editing ex | Use when creating new skills / editing existing  |
+| `firecrawl-agent` | `firecrawl` | Active | 无 | AI-powered autonomous data extraction th | the user wants structured data from websites / n |
+| `firecrawl-build` | `firecrawl` | Active | 0.1.0 | Integrate Firecrawl into application cod | building any feature that needs data from the we |
+| `firecrawl-build-interact` | `firecrawl` | Active | 0.1.0 | Integrate Firecrawl `/interact` into pro | a feature needs clicks / form fills |
+| `firecrawl-build-onboarding` | `firecrawl` | Active | 0.1.0 | Get Firecrawl credentials and SDK setup  | an application needs `FIRECRAWL_API_KEY` / when  |
+| `firecrawl-build-scrape` | `firecrawl` | Active | 0.1.0 | Integrate Firecrawl `/scrape` into produ | an app already has a URL and needs markdown / HT |
+| `firecrawl-build-search` | `firecrawl` | Active | 0.1.0 | Integrate Firecrawl `/search` into produ | an app needs discovery before extraction / when  |
+| `firecrawl-cli` | `firecrawl` | Active | 无 | Search, scrape, and interact with the we | the user wants to search the web / find articles |
+| `firecrawl-crawl` | `firecrawl` | Active | 无 | Bulk extract content from an entire webs | the user wants to crawl a site / extract all pag |
+| `firecrawl-download` | `firecrawl` | Active | 无 | Download an entire website as local file | the user wants to save a site locally / download |
+| `firecrawl-interact` | `firecrawl` | Active | 无 | Control and interact with a live browser | the user needs to interact with a webpage beyond |
+| `firecrawl-map` | `firecrawl` | Active | 无 | Discover and list all URLs on a website, | the user wants to find a specific page on a larg |
+| `firecrawl-monitor` | `firecrawl` | Active | 无 | Detect when content on a website changes | the user wants to track changes on a page / watc |
+| `firecrawl-parse` | `firecrawl` | Active | 无 | Efficiently extract and convert the cont | the user requests to parse / read |
+| `firecrawl-scrape` | `firecrawl` | Active | 无 | Extract clean markdown from any URL, inc | the user provides a URL and wants its content /  |
+| `firecrawl-search` | `firecrawl` | Active | 无 | Web search with full page content extrac | the user asks to search the web / find articles |
 
 ## Markdown 入口目录
 
-```text
-/Users/ganxuanzhi/skills/README.md                         ← 根目录规则说明
-/Users/ganxuanzhi/skills/MANAGEMENT.md                      ← 管理手册
-/Users/ganxuanzhi/skills/INDEX.md                           ← 本文件，索引
-/Users/ganxuanzhi/skills/nature/README.md                   ← nature 分类入口
-/Users/ganxuanzhi/skills/paper-craft/README.md              ← paper-craft 分类入口
-/Users/ganxuanzhi/skills/academic-research/README.md        ← academic-research 分类入口
-/Users/ganxuanzhi/skills/firecrawl/README.md                 ← firecrawl 分类入口
-```
+- [README.md](/Users/ganxuanzhi/skills/README.md): 根目录规则说明
+- [MANAGEMENT.md](/Users/ganxuanzhi/skills/MANAGEMENT.md): 管理手册
+- [INDEX.md](/Users/ganxuanzhi/skills/INDEX.md): 总索引
+- [nature/README.md](/Users/ganxuanzhi/skills/nature/README.md): 学术写作 分类入口
+- [paper-craft/README.md](/Users/ganxuanzhi/skills/paper-craft/README.md): 论文可视化 分类入口
+- [academic-research/README.md](/Users/ganxuanzhi/skills/academic-research/README.md): 学术研究 分类入口
+- [superpowers/README.md](/Users/ganxuanzhi/skills/superpowers/README.md): 软件开发 分类入口
+- [firecrawl/README.md](/Users/ganxuanzhi/skills/firecrawl/README.md): web 数据提取 分类入口
+- [nature/nature-academic-search/SKILL.md](/Users/ganxuanzhi/skills/nature/nature-academic-search/SKILL.md): 多源文献检索、引文核对、MeSH 检索策略、文献文件转换与参考文献管理。
+- [nature/nature-citation/SKILL.md](/Users/ganxuanzhi/skills/nature/nature-citation/SKILL.md): 为论文段落、手稿或论点自动寻找高质量支撑文献，并导出参考文献管理器可用格式。
+- [nature/nature-data/SKILL.md](/Users/ganxuanzhi/skills/nature/nature-data/SKILL.md): 撰写、审计或修改 Data Availability、代码和数据共享、仓库选择、FAIR 元数据
+- [nature/nature-figure/SKILL.md](/Users/ganxuanzhi/skills/nature/nature-figure/SKILL.md): 创建、修改、审计和导出高水平期刊论文图表，支持 Python 或 R 后端。
+- [nature/nature-paper-to-patent/SKILL.md](/Users/ganxuanzhi/skills/nature/nature-paper-to-patent/SKILL.md): 把科研论文、技术报告、代码或图表转化为证据扎实的中国发明专利草案。
+- [nature/nature-paper2ppt/SKILL.md](/Users/ganxuanzhi/skills/nature/nature-paper2ppt/SKILL.md): 从论文、预印本、PDF、摘要或阅读笔记生成中文学术汇报 PPTX。
+- [nature/nature-polishing/SKILL.md](/Users/ganxuanzhi/skills/nature/nature-polishing/SKILL.md): Nature 风格英文润色、中译英、章节重构、标题摘要改写，以及 LaTeX 页面和浮动体排版问
+- [nature/nature-reader/SKILL.md](/Users/ganxuanzhi/skills/nature/nature-reader/SKILL.md): 从 PDF、DOI、arXiv、HTML 或粘贴文本生成论文全文中英对照、图表就位、带源锚点的 
+- [nature/nature-response/SKILL.md](/Users/ganxuanzhi/skills/nature/nature-response/SKILL.md): 起草、审计和修改逐点审稿回复、rebuttal、修回信和编辑回复。
+- [nature/nature-reviewer/SKILL.md](/Users/ganxuanzhi/skills/nature/nature-reviewer/SKILL.md): 从审稿人视角模拟 Nature 风格评审，输出多位 reviewer report 和交叉综合意
+- [nature/nature-writing/SKILL.md](/Users/ganxuanzhi/skills/nature/nature-writing/SKILL.md): 根据 claims、结果、图表、笔记或中文草稿起草和重构 Nature 风格论文段落与整体论证。
+- [paper-craft/paper-analyzer/SKILL.md](/Users/ganxuanzhi/skills/paper-craft/paper-analyzer/SKILL.md): 将学术论文转化为深度 HTML 长文。6 轮强制工作流：论文解析→代码仓库搜索→公式渲染（KaT
+- [paper-craft/paper-comic/SKILL.md](/Users/ganxuanzhi/skills/paper-craft/paper-comic/SKILL.md): 论文方法图解——用视觉图解讲清楚一篇论文的核心方法。先分析论文方法，推荐封面/概述图/机制细节图
+- [paper-craft/paper-deck/SKILL.md](/Users/ganxuanzhi/skills/paper-craft/paper-deck/SKILL.md): 将论文/技术文章制作成高真实感 AIGC 幻灯片。先做叙事结构和逐页视觉导演，再调用生图模型生成
+- [academic-research/academic-paper/SKILL.md](/Users/ganxuanzhi/skills/academic-research/academic-paper/SKILL.md): 12-agent academic paper writing pipeline. 10 mod
+- [academic-research/academic-paper-reviewer/SKILL.md](/Users/ganxuanzhi/skills/academic-research/academic-paper-reviewer/SKILL.md): Multi-perspective academic paper review with dyn
+- [academic-research/academic-pipeline/SKILL.md](/Users/ganxuanzhi/skills/academic-research/academic-pipeline/SKILL.md): Orchestrator for the full academic research pipe
+- [academic-research/deep-research/SKILL.md](/Users/ganxuanzhi/skills/academic-research/deep-research/SKILL.md): Universal deep research agent team. 13-agent pip
+- [superpowers/brainstorming/SKILL.md](/Users/ganxuanzhi/skills/superpowers/brainstorming/SKILL.md): You MUST use this before any creative work - cre
+- [superpowers/dispatching-parallel-agents/SKILL.md](/Users/ganxuanzhi/skills/superpowers/dispatching-parallel-agents/SKILL.md): Use when facing 2+ independent tasks that can be
+- [superpowers/executing-plans/SKILL.md](/Users/ganxuanzhi/skills/superpowers/executing-plans/SKILL.md): Use when you have a written implementation plan 
+- [superpowers/finishing-a-development-branch/SKILL.md](/Users/ganxuanzhi/skills/superpowers/finishing-a-development-branch/SKILL.md): Use when implementation is complete, all tests p
+- [superpowers/receiving-code-review/SKILL.md](/Users/ganxuanzhi/skills/superpowers/receiving-code-review/SKILL.md): Use when receiving code review feedback, before 
+- [superpowers/requesting-code-review/SKILL.md](/Users/ganxuanzhi/skills/superpowers/requesting-code-review/SKILL.md): Use when completing tasks, implementing major fe
+- [superpowers/subagent-driven-development/SKILL.md](/Users/ganxuanzhi/skills/superpowers/subagent-driven-development/SKILL.md): Use when executing implementation plans with ind
+- [superpowers/systematic-debugging/SKILL.md](/Users/ganxuanzhi/skills/superpowers/systematic-debugging/SKILL.md): Use when encountering any bug, test failure, or 
+- [superpowers/test-driven-development/SKILL.md](/Users/ganxuanzhi/skills/superpowers/test-driven-development/SKILL.md): Use when implementing any feature or bugfix, bef
+- [superpowers/using-git-worktrees/SKILL.md](/Users/ganxuanzhi/skills/superpowers/using-git-worktrees/SKILL.md): Use when starting feature work that needs isolat
+- [superpowers/using-superpowers/SKILL.md](/Users/ganxuanzhi/skills/superpowers/using-superpowers/SKILL.md): Use when starting any conversation - establishes
+- [superpowers/verification-before-completion/SKILL.md](/Users/ganxuanzhi/skills/superpowers/verification-before-completion/SKILL.md): Use when about to claim work is complete, fixed,
+- [superpowers/writing-plans/SKILL.md](/Users/ganxuanzhi/skills/superpowers/writing-plans/SKILL.md): Use when you have a spec or requirements for a m
+- [superpowers/writing-skills/SKILL.md](/Users/ganxuanzhi/skills/superpowers/writing-skills/SKILL.md): Use when creating new skills, editing existing s
+- [firecrawl/firecrawl-agent/SKILL.md](/Users/ganxuanzhi/skills/firecrawl/firecrawl-agent/SKILL.md): AI-powered autonomous data extraction that navig
+- [firecrawl/firecrawl-build/SKILL.md](/Users/ganxuanzhi/skills/firecrawl/firecrawl-build/SKILL.md): Integrate Firecrawl into application code whenev
+- [firecrawl/firecrawl-build-interact/SKILL.md](/Users/ganxuanzhi/skills/firecrawl/firecrawl-build-interact/SKILL.md): Integrate Firecrawl `/interact` into product cod
+- [firecrawl/firecrawl-build-onboarding/SKILL.md](/Users/ganxuanzhi/skills/firecrawl/firecrawl-build-onboarding/SKILL.md): Get Firecrawl credentials and SDK setup into a p
+- [firecrawl/firecrawl-build-scrape/SKILL.md](/Users/ganxuanzhi/skills/firecrawl/firecrawl-build-scrape/SKILL.md): Integrate Firecrawl `/scrape` into product code 
+- [firecrawl/firecrawl-build-search/SKILL.md](/Users/ganxuanzhi/skills/firecrawl/firecrawl-build-search/SKILL.md): Integrate Firecrawl `/search` into product code 
+- [firecrawl/firecrawl-cli/SKILL.md](/Users/ganxuanzhi/skills/firecrawl/firecrawl-cli/SKILL.md): Search, scrape, and interact with the web via th
+- [firecrawl/firecrawl-crawl/SKILL.md](/Users/ganxuanzhi/skills/firecrawl/firecrawl-crawl/SKILL.md): Bulk extract content from an entire website or s
+- [firecrawl/firecrawl-download/SKILL.md](/Users/ganxuanzhi/skills/firecrawl/firecrawl-download/SKILL.md): Download an entire website as local files — mark
+- [firecrawl/firecrawl-interact/SKILL.md](/Users/ganxuanzhi/skills/firecrawl/firecrawl-interact/SKILL.md): Control and interact with a live browser session
+- [firecrawl/firecrawl-map/SKILL.md](/Users/ganxuanzhi/skills/firecrawl/firecrawl-map/SKILL.md): Discover and list all URLs on a website, with op
+- [firecrawl/firecrawl-monitor/SKILL.md](/Users/ganxuanzhi/skills/firecrawl/firecrawl-monitor/SKILL.md): Detect when content on a website changes and get
+- [firecrawl/firecrawl-parse/SKILL.md](/Users/ganxuanzhi/skills/firecrawl/firecrawl-parse/SKILL.md): Efficiently extract and convert the contents of 
+- [firecrawl/firecrawl-scrape/SKILL.md](/Users/ganxuanzhi/skills/firecrawl/firecrawl-scrape/SKILL.md): Extract clean markdown from any URL, including J
+- [firecrawl/firecrawl-search/SKILL.md](/Users/ganxuanzhi/skills/firecrawl/firecrawl-search/SKILL.md): Web search with full page content extraction. Us
 
-完整 SKILL.md 列表运行：`/Users/ganxuanzhi/skills/_management/scripts/list-skills.sh`
+## 调度建议表
 
----
-
-## 调度建议
-
-### 按领域分类
-
-| 用户想做什么 | 领域 | 首选分类 |
+| 任务阶段 | 首选 skill | 可联动 skill |
 |---|---|---|
-| 写论文、润色、审稿回复 | 学术写作 | `nature/` |
-| 论文解读、方法图、AIGC 幻灯片 | 论文可视化 | `paper-craft/` |
-| 深度文献研究、多 agent 论文管道 | 学术研究 | `academic-research/` |
-| 软件开发、调试、代码审查 | 软件开发 | `superpowers/` |
-| web 抓取、搜索、数据提取 | web 数据 | `firecrawl/` |
-
-### 跨分类关键区分
-
-| 混淆场景 | 选哪个 | 为什么 |
-|---|---|---|
-| 轻量审稿 vs 深度审稿 | `nature-reviewer` (轻量) / `academic-paper-reviewer` (深度) | academic-research 有 5 位审稿人+6 种模式 |
-| 起草段落 vs 完整论文 | `nature-writing` (起草) / `academic-paper` (完整) | academic-research 12-agent 全管道 |
-| 简单检索 vs 深度研究 | `nature-academic-search` (检索) / `deep-research` (研究) | academic-research 13-agent 管道 |
-| 文字PPT vs 视觉PPT | `nature-paper2ppt` (文字) / `paper-deck` (视觉) | paper-craft 逐页生图 |
-| 数据图 vs 概念图 | `nature-figure` (数据图) / `paper-comic` (概念图) | paper-craft 生图模型 |
-
----
+| 找资料 | `nature-academic-search` | `nature-citation / deep-research` |
+| 读论文 | `nature-reader` | `nature-academic-search / paper-analyzer` |
+| 写初稿 | `nature-writing` | `nature-citation / nature-data / academic-paper` |
+| 润色 | `nature-polishing` | `nature-citation / nature-writing` |
+| 补引用 | `nature-citation` | `nature-academic-search` |
+| 做图 | `nature-figure` | `nature-data / paper-comic` |
+| 做汇报 | `nature-paper2ppt` | `nature-reader / nature-figure / paper-deck` |
+| 回审稿人 | `nature-response` | `nature-polishing / nature-citation` |
+| 投稿前自审 | `nature-reviewer` | `nature-writing / nature-polishing / academic-paper-reviewer` |
+| 转专利 | `nature-paper-to-patent` | `nature-reader` |
 
 ## 维护命令
 
@@ -142,11 +149,25 @@
 git -C /Users/ganxuanzhi/skills status --short
 ```
 
----
+## 健康检查
+
+| 项目 | 状态 | 备注 |
+|---|---|---|
+| Claude Code 软链接 | OK | 指向 /Users/ganxuanzhi/skills |
+| Codex 软链接 | OK | 指向 /Users/ganxuanzhi/skills |
+| Git remote | OK | origin=https://github.com/yuanfang11223344/skills.git |
+| Git push | FAIL | git fetch --dry-run: LibreSSL SSL_ERROR_SYSCALL 连接 github.com:443 |
+| Obsidian 目录 | OK | 目录已存在 |
+| list-skills.sh | OK | _management/scripts/list-skills.sh 可执行 |
 
 ## 跨工具加载状态
 
-| 工具 | 软链接 | 说明 |
-|---|---|---|
-| Claude Code | OK | `~/.claude/skills` → skills |
-| Codex | OK | `~/.codex/skills/shared-user-skills` → skills |
+| 工具 | 软链接 | 文件可读 | 说明 |
+|---|---|---|---|
+| Claude Code | OK | OK | 需要新 session 生效 |
+| Codex | OK | OK | 已通过 shared-user-skills 加载 |
+
+提示：
+- Claude Code 未生效时，重启 session 或运行 `claude --clear-cache`。
+- Codex 未生效时，重启 Codex session。
+- 首次安装或大改后的 skill 可能需要 1-2 次交互后才会被自动发现。
