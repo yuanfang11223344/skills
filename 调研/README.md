@@ -186,3 +186,64 @@
 | **Elsevier/ScienceDirect** | scholar-megasearch (via Crossref/OpenAlex) | 间接覆盖 |
 | **Scopus** | papers, search-papers | 间接覆盖 |
 
+
+
+## 第三轮补充（2026-06-15）：AI资讯全源跟踪
+
+新增21个skill，覆盖论文、新闻、会议、公司宣传、个人博客、自媒体、社交媒体、视频/播客等全渠道AI资讯。
+
+### 发现阶段新增（19 skill）
+
+| Skill | 功能 | 来源 |
+|---|---|---|
+| `ai-hotspots` | 跟踪AI热点，生成双语HTML日报，涵盖产品/论文/观点 | huangruiteng/cs-notes |
+| `daily-ai-news` | 4阶段AI新闻聚合（收集→过滤→分类→输出），多源结构化日报 | YYH211/claude-meta-skill |
+| `ai-daily-skill` | 从smol.ai获取AI资讯，3种主题网页+分享卡片+小红书封面 | geekjourneyx/ai-daily-skill |
+| `daily-news` | 中文日报生成器，三阶段工作流，支持自定义信源和用户画像 | eze-is/eze-skills |
+| `news-sentiment-engine` | 多源RSS(TechCrunch/Verge/Ars/HN)聚合+Claude情感分析+结构化简报 | ranbot-ai/awesome-skills |
+| `blogwatcher` | RSS/Atom博客监控，支持添加/扫描/阅读，Go CLI+Python双实现 | Hyaxia/blogwatcher |
+| `topic-collector` | AI热点选题采集，聚合X/PH/Reddit/HN/博客，预配置AI KOL列表 | zephyrwang6/myskill |
+| `notslop` | 多源社交信息(Reddit+HN+博客+X)，19个skill，去重+相关性排序 | adrienckr/notslop |
+| `last30days` | 最近30天Reddit/X/Web话题调研，模式检测+情感分析 | luokai25/luo-os |
+| `openrss` | 将任何网站转为RSS feed，内置X/Bilibili/GitHub/YouTube/Reddit/HN提示 | RelientS/openrss |
+| `researcher-news` | 新闻研究员角色，从多渠道搜集和验证新闻信息 | ayuvinc/ak-cognitive-os |
+| `thread-analysis` | 分析Twitter/X串，提取病毒传播和教育性内容的洞察 | az9713/cerebro |
+| `hn-analysis` | Hacker News分析和趋势检测 | az9713/cerebro |
+| `youtube-analysis` | YouTube视频/频道内容分析 | az9713/cerebro |
+| `podcast-analysis` | 播客内容分析+转录 | az9713/cerebro |
+| `article-analysis` | 网络文章/博客深度分析 | az9713/cerebro |
+| `content-analysis` | 通用内容分析（文章/视频/社交帖子） | az9713/cerebro |
+
+### 分析阶段新增（2 skill）
+
+| Skill | 功能 | 来源 |
+|---|---|---|
+| `extract-wisdom` | 从文章、视频、播客、文档中提取有价值的洞察，去除噪音 | jwm-axoni/auggie-pai |
+| `content-engine` | 平台原生内容创建：X推文串/LinkedIn/TikTok/YouTube/newsletter | affaan-m/ecc-agents |
+
+### 产出阶段新增（2 skill）
+
+| Skill | 功能 | 来源 |
+|---|---|---|
+| `podcast-publishing-assistant` | 转录播客/音频→提取章节→撰写show notes+YouTube描述+推文 | swyxio/skills |
+| `content-digest` | YouTube/播客/访谈→短篇社媒帖子+长篇叙事文章 | zephyrwang6/myskill |
+
+---
+
+## AI资讯全源覆盖矩阵（更新后）
+
+| 资讯来源 | 覆盖 skill | 方式 |
+|---|---|---|
+| **arXiv/学术论文** | arxiv-monitor, scholar-megasearch, arxiv-search-v2, arxiv-analysis | 直接API |
+| **IEEE/ACM/会议论文** | scholar-megasearch, dblp-search, crossref-search | API+间接 |
+| **AI新闻网站** | daily-ai-news, ai-daily-skill, daily-news, ai-hotspots | Web抓取+聚合 |
+| **TechCrunch/Verge/Ars** | news-sentiment-engine | RSS+情感分析 |
+| **Hacker News** | hn-analysis, intelligence, ecosystem-monitoring | API+抓取 |
+| **Reddit** | last30days, notslop, intelligence | API |
+| **Twitter/X** | thread-analysis, topic-collector, notslop | API |
+| **YouTube** | youtube-analysis, content-digest | 转录API |
+| **播客** | podcast-analysis, podcast-publishing-assistant | 转录API |
+| **技术博客(RSS)** | blogwatcher, openrss, ecosystem-monitoring | RSS/Atom |
+| **公司官网/公告** | firecrawl-monitor, ecosystem-monitoring, competitive-intelligence | 网页变更检测 |
+| **GitHub开源动态** | ecosystem-monitoring, intelligence | 仓库监控 |
+| **微信公众号/知乎/微博** | openrss（部分支持） | 间接 |
