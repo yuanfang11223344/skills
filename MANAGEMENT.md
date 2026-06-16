@@ -27,6 +27,7 @@
 - 调研/ 分类来自 SkillsMP (skillsmp.com) 多源汇总，79 个 skill（发现45/分析19/产出12/推送4），按 4 阶段组织
 - 上游 firecrawl-skills：`https://github.com/firecrawl/skills`
 - 上游 firecrawl-cli：`https://github.com/firecrawl/cli`
+- 上游 ppt-master：`https://github.com/hugohe3/ppt-master`
 
 ## 分类核心原则：一个来源 = 一个分类目录
 
@@ -49,6 +50,7 @@
 | `superpowers/` | `obra/superpowers` | obra |
 | `firecrawl/` | `firecrawl/skills` + `firecrawl/cli` | firecrawl |
 | `调研/` | SkillsMP 多源汇总 | 社区 |
+| `ppt/` | `hugohe3/ppt-master` | hugohe3 |
 
 ## 当前任务状态
 
@@ -56,8 +58,8 @@
 
 | 项目 | 当前状态 |
 |---|---|
-| 分类总数 | 6 个：`nature/`、`paper-craft/`、`academic-research/`、`superpowers/`、`firecrawl/`、`调研/` |
-| Skill 总数 | 126 个（nature 11 + paper-craft 3 + academic-research 4 + superpowers 14 + firecrawl 15 + 调研 79） |
+| 分类总数 | 7 个：`nature/`、`paper-craft/`、`academic-research/`、`superpowers/`、`firecrawl/`、`调研/`、`ppt/` |
+| Skill 总数 | 127 个（nature 11 + paper-craft 3 + academic-research 4 + superpowers 14 + firecrawl 15 + 调研 79 + ppt 1） |
 | `STATUS.md` 覆盖 | 126/126，全部具备情况说明 |
 | 本地 Git | `main` 分支，已设置 upstream |
 | GitHub 同步 | `origin/main` 可达，远端为 `https://github.com/yuanfang11223344/skills.git` |
@@ -75,6 +77,7 @@
 | `superpowers/` | 14 | 管理软件开发方法论、调试、计划、评审流程 | 编程/工程任务的工作法 |
 | `firecrawl/` | 15 | 管理 web 搜索、抓取、交互、SDK 集成技能 | 网页数据提取与应用集成 |
 | `调研/` | 79 | 管理学术调研全流程技能（发现45/分析19/产出12/推送4），按阶段维护 | 学术调研从发现到推送全链路 |
+| `ppt/` | 1 | 管理 AI 多角色 PPT 生成技能 | PDF/DOCX/URL/MD → SVG → PPTX |
 
 ### 当前维护待办
 
