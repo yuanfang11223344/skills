@@ -17,6 +17,7 @@
 | `firecrawl/` | `firecrawl/skills + firecrawl/cli` | firecrawl | 15 | web 数据提取 | [firecrawl/README.md](/Users/ganxuanzhi/skills/firecrawl/README.md) |
 | `调研/` | SkillsMP 多源汇总 | 社区 | 79 | 学术调研全流程 | [调研/README.md](/Users/ganxuanzhi/skills/调研/README.md) |
 | `ppt/` | `hugohe3/ppt-master` | hugohe3 | 1 | PPT 生成 | [ppt/README.md](/Users/ganxuanzhi/skills/ppt/README.md) |
+| `分析/` | SkillsMP+GitHub 精选 | 社区 | 17 | Markdown 文档分析可视化 | [分析/README.md](/Users/ganxuanzhi/skills/分析/README.md) |
 
 ## 总览表
 
@@ -84,6 +85,7 @@
 - [firecrawl/README.md](/Users/ganxuanzhi/skills/firecrawl/README.md): web 数据提取 分类入口
 - [调研/README.md](/Users/ganxuanzhi/skills/调研/README.md): 学术调研全流程 分类入口（79 skill，4阶段）
 - [ppt/README.md](/Users/ganxuanzhi/skills/ppt/README.md): PPT 生成 分类入口
+- [分析/README.md](/Users/ganxuanzhi/skills/分析/README.md): Markdown 文档分析可视化 分类入口
 - [nature/nature-academic-search/SKILL.md](/Users/ganxuanzhi/skills/nature/nature-academic-search/SKILL.md): 多源文献检索、引文核对、MeSH 检索策略、文献文件转换与参考文献管理。
 - [nature/nature-citation/SKILL.md](/Users/ganxuanzhi/skills/nature/nature-citation/SKILL.md): 为论文段落、手稿或论点自动寻找高质量支撑文献，并导出参考文献管理器可用格式。
 - [nature/nature-data/SKILL.md](/Users/ganxuanzhi/skills/nature/nature-data/SKILL.md): 撰写、审计或修改 Data Availability、代码和数据共享、仓库选择、FAIR 元数据

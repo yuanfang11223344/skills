@@ -28,6 +28,10 @@
 - 上游 firecrawl-skills：`https://github.com/firecrawl/skills`
 - 上游 firecrawl-cli：`https://github.com/firecrawl/cli`
 - 上游 ppt-master：`https://github.com/hugohe3/ppt-master`
+- 上游 paper-reading：`https://github.com/Mizoreww/awesome-claude-code-config`
+- 上游 markdown-viewer：`https://github.com/markdown-viewer/skills`
+- 上游 paper-onion：`https://github.com/didixuxu/didi-skills`
+- 上游 pdf-analysis：`https://github.com/az9713/cerebro`
 
 ## 分类核心原则：一个来源 = 一个分类目录
 
@@ -51,6 +55,7 @@
 | `firecrawl/` | `firecrawl/skills` + `firecrawl/cli` | firecrawl |
 | `调研/` | SkillsMP 多源汇总 | 社区 |
 | `ppt/` | `hugohe3/ppt-master` | hugohe3 |
+| `分析/` | SkillsMP+GitHub 精选 | 社区 |
 
 ## 当前任务状态
 
@@ -58,8 +63,8 @@
 
 | 项目 | 当前状态 |
 |---|---|
-| 分类总数 | 7 个：`nature/`、`paper-craft/`、`academic-research/`、`superpowers/`、`firecrawl/`、`调研/`、`ppt/` |
-| Skill 总数 | 127 个（nature 11 + paper-craft 3 + academic-research 4 + superpowers 14 + firecrawl 15 + 调研 79 + ppt 1） |
+| 分类总数 | 8 个：`nature/`、`paper-craft/`、`academic-research/`、`superpowers/`、`firecrawl/`、`调研/`、`ppt/`、`分析/` |
+| Skill 总数 | 144 个（nature 11 + paper-craft 3 + academic-research 4 + superpowers 14 + firecrawl 15 + 调研 79 + ppt 1 + 分析 17） |
 | `STATUS.md` 覆盖 | 126/126，全部具备情况说明 |
 | 本地 Git | `main` 分支，已设置 upstream |
 | GitHub 同步 | `origin/main` 可达，远端为 `https://github.com/yuanfang11223344/skills.git` |
@@ -78,6 +83,7 @@
 | `firecrawl/` | 15 | 管理 web 搜索、抓取、交互、SDK 集成技能 | 网页数据提取与应用集成 |
 | `调研/` | 79 | 管理学术调研全流程技能（发现45/分析19/产出12/推送4），按阶段维护 | 学术调研从发现到推送全链路 |
 | `ppt/` | 1 | 管理 AI 多角色 PPT 生成技能 | PDF/DOCX/URL/MD → SVG → PPTX |
+| `分析/` | 17 | 管理 Markdown 文档分析可视化技能 | PDF/论文→分析→Markdown原生图表 |
 
 ### 当前维护待办
 
