@@ -32,6 +32,9 @@
 - 上游 markdown-viewer：`https://github.com/markdown-viewer/skills`
 - 上游 paper-onion：`https://github.com/didixuxu/didi-skills`
 - 上游 pdf-analysis：`https://github.com/az9713/cerebro`
+- 上游 baoyu-translate：`https://github.com/JimLiu/baoyu-skills`
+- 上游 pdf-translator：`https://github.com/ForceInjection/AI-fundamentals`
+- 上游 translate-polisher：`https://github.com/rookie-ricardo/erduo-skills`
 
 ## 分类核心原则：一个来源 = 一个分类目录
 
@@ -64,7 +67,7 @@
 | 项目 | 当前状态 |
 |---|---|
 | 分类总数 | 8 个：`nature/`、`paper-craft/`、`academic-research/`、`superpowers/`、`firecrawl/`、`调研/`、`ppt/`、`分析/` |
-| Skill 总数 | 144 个（nature 11 + paper-craft 3 + academic-research 4 + superpowers 14 + firecrawl 15 + 调研 79 + ppt 1 + 分析 17） |
+| Skill 总数 | 147 个（nature 11 + paper-craft 3 + academic-research 4 + superpowers 14 + firecrawl 15 + 调研 79 + ppt 1 + 分析 20） |
 | `STATUS.md` 覆盖 | 126/126，全部具备情况说明 |
 | 本地 Git | `main` 分支，已设置 upstream |
 | GitHub 同步 | `origin/main` 可达，远端为 `https://github.com/yuanfang11223344/skills.git` |
@@ -83,7 +86,7 @@
 | `firecrawl/` | 15 | 管理 web 搜索、抓取、交互、SDK 集成技能 | 网页数据提取与应用集成 |
 | `调研/` | 79 | 管理学术调研全流程技能（发现45/分析19/产出12/推送4），按阶段维护 | 学术调研从发现到推送全链路 |
 | `ppt/` | 1 | 管理 AI 多角色 PPT 生成技能 | PDF/DOCX/URL/MD → SVG → PPTX |
-| `分析/` | 17 | 管理 Markdown 文档分析可视化技能 | PDF/论文→分析→Markdown原生图表 |
+| `分析/` | 20 | 管理 Markdown 文档分析+翻译技能 | 英文PDF→翻译→分析→Markdown原生图表 |
 
 ### 当前维护待办
 

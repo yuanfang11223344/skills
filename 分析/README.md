@@ -1,10 +1,10 @@
 # 分析 — Markdown 友好型文档分析可视化
 
 > 来源：SkillsMP + GitHub 精选
-> 安装日期：2026-06-16
-> 总计：17 个 skill
+> 安装日期：2026-06-16 | 更新：2026-06-17（新增翻译 3 skill）
+> 总计：20 个 skill（分析 3 + 翻译 3 + 可视化 14）
 
-分析报告/文章/PDF，输出 Markdown 原生内嵌的可视化图表。从输入到理解到呈现，全链路 Markdown 友好。
+分析报告/文章/PDF，包含翻译和 Markdown 原生可视化。从输入→翻译→理解→呈现，全链路 Markdown 友好。
 
 ---
 
@@ -16,7 +16,10 @@
 ├── paper-reading/      # ① 论文结构化阅读（HTML/Markdown双模式+手绘SVG图）
 ├── paper-onion/        # ② 4层剥洋葱深度阅读（思维导图笔记卡）
 ├── pdf-analysis/       # ③ 通用PDF分析（报告/白皮书/电子书）
-└── markdown-viewer/    # ④ Markdown原生内嵌图表（14个引擎）
+├── baoyu-translate/    # ④ 三模式翻译（快翻/标准/精翻，术语表）
+├── pdf-translator/     # ⑤ PDF翻译器（PDF→Markdown，含脚本）
+├── translate-polisher/ # ⑥ 四步精翻（分析→初译→审校→终稿，882⭐）
+└── markdown-viewer/    # ⑦ Markdown原生内嵌图表（14个引擎）
     ├── vega/             # 数据图表（柱线散饼热力雷达词云）
     ├── infographic/      # 信息图（KPI/路线图/SWOT/漏斗）
     ├── canvas/           # 思维导图/概念图/知识图谱
@@ -35,7 +38,42 @@
 
 ---
 
-## 四阶段工作流
+## 完整工作流（更新）
+
+```
+英文 PDF/论文/报告
+      │
+      ▼
+┌─────────────────┐
+│ 翻译层            │  baoyu-translate (快翻/标准/精翻)
+│ PDF→中文Markdown  │  pdf-translator (批量PDF翻译)
+│                   │  translate-polisher (四步精翻)
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│ ① 输入分析       │  paper-reading (论文) / pdf-analysis (通用)
+│ 提取关键信息      │  自动识别类型、提取图表、结构化输出
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│ ② 深度理解       │  paper-onion
+│ 四层剥洋葱        │  30s扫描→5min骨架→20min深挖→10min内化
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│ ③ 可视化呈现     │  markdown-viewer (14引擎)
+│ Markdown原生图表  │  Vega/Canvas/PlantUML/Infographic
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│ ④ 输出到 Obsidian│  所有图表写在 .md 文件内
+│ 直接打开即看      │  无需外链图片/HTML/PNG
+└─────────────────┘
+```
 
 ```
 PDF/论文/报告
@@ -86,7 +124,34 @@ PDF/论文/报告
 | 核心功能 | Layer 1(30s)：第一印象 / Layer 2(5min)：骨架映射（痛点→灵感→方案→证据）/ Layer 3(20min)：核心机制+隐藏假设 / Layer 4(10min)：内化连接+个人洞察 |
 | 输出 | 手绘风格思维导图笔记卡（React artifact），纸张纹理背景+手写字体+箭头连接 |
 
-### ③ pdf-analysis — 通用PDF分析
+### ③ baoyu-translate — 三模式翻译 (⭐⭐)
+
+| 属性 | 值 |
+|---|---|
+| 来源 | JimLiu/baoyu-skills |
+| 核心功能 | **三种翻译模式**：快翻（直接输出译文）/ 标准（分析+翻译）/ 精翻（分析+翻译+审校+润色）。支持中英互译，可自定义术语表，适合需要精确翻译的专业文档 |
+| 触发词 | translate、翻译、精翻、translate to Chinese/English、改成中文/英文 |
+| 输出 | 翻译后的 Markdown（保持原文结构） |
+
+### ④ pdf-translator — PDF翻译器
+
+| 属性 | 值 |
+|---|---|
+| 来源 | ForceInjection/AI-fundamentals |
+| 核心功能 | 从 PDF 提取文本 → Python 脚本处理 → 翻译成目标语言 → 保存为 Markdown。自带 `extract_text.py` + `generate_md.py` 脚本，适合批量 PDF 翻译 |
+| 触发词 | convert PDF to Chinese、translate PDF、PDF翻译 |
+| 输出 | 翻译后的 Markdown 文件 |
+
+### ⑤ translate-polisher — 四步精翻 (882⭐)
+
+| 属性 | 值 |
+|---|---|
+| 来源 | rookie-ricardo/erduo-skills |
+| 核心功能 | **四步精翻工作流**：分析→初译→审校→终稿。支持中英/中日。可选读者预设（普通/技术/学术/商务）和风格预设（正式/技术/直译/学术/商务/精炼等9种） |
+| 触发词 | 翻译、精翻、translate、localize、英译中、中译英 |
+| 输出 | 四步精翻后的高质量译文 |
+
+### ⑥ pdf-analysis — 通用PDF分析
 
 | 属性 | 值 |
 |---|---|
@@ -94,7 +159,7 @@ PDF/论文/报告
 | 核心功能 | 处理报告、白皮书、电子书、手册等非论文PDF。结构化Markdown输出，含摘要、关键点和数据提取 |
 | 触发词 | analyze PDF, extract from PDF, summarize document |
 
-### ④ markdown-viewer — Markdown原生内嵌图表（14引擎）
+### ⑦ markdown-viewer — Markdown原生内嵌图表（14引擎）
 
 | 引擎 | 用途 | 格式 |
 |---|---|---|

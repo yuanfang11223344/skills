@@ -17,7 +17,7 @@
 | `firecrawl/` | `firecrawl/skills + firecrawl/cli` | firecrawl | 15 | web 数据提取 | [firecrawl/README.md](/Users/ganxuanzhi/skills/firecrawl/README.md) |
 | `调研/` | SkillsMP 多源汇总 | 社区 | 79 | 学术调研全流程 | [调研/README.md](/Users/ganxuanzhi/skills/调研/README.md) |
 | `ppt/` | `hugohe3/ppt-master` | hugohe3 | 1 | PPT 生成 | [ppt/README.md](/Users/ganxuanzhi/skills/ppt/README.md) |
-| `分析/` | SkillsMP+GitHub 精选 | 社区 | 17 | Markdown 文档分析可视化 | [分析/README.md](/Users/ganxuanzhi/skills/分析/README.md) |
+| `分析/` | SkillsMP+GitHub 精选 | 社区 | 20 | Markdown 文档分析可视化+翻译 | [分析/README.md](/Users/ganxuanzhi/skills/分析/README.md) |
 
 ## 总览表
 

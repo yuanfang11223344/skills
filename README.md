@@ -53,7 +53,7 @@ skills/
 | `firecrawl/` | firecrawl/skills + firecrawl/cli | web 数据 | 15 | [firecrawl/README.md](firecrawl/README.md) |
 | `调研/` | SkillsMP 多源汇总 | 学术调研 | 79 | [调研/README.md](调研/README.md) |
 | `ppt/` | hugohe3/ppt-master | PPT 生成 | 1 | [ppt/README.md](ppt/README.md) |
-| `分析/` | SkillsMP+GitHub | 文档分析 | 17 | [分析/README.md](分析/README.md) |
+| `分析/` | SkillsMP+GitHub | 文档分析+翻译 | 20 | [分析/README.md](分析/README.md) |
 
 ## Skill 文件格式
 
